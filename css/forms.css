@@ -3,8 +3,9 @@
 }
 .penalty-list { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
 .muted-copy { color: var(--muted); }
-.tournament-overview-header { padding: 42px; border-radius: 8px; background: linear-gradient(135deg, #143e33, #091f18); color: white; }
-.tournament-overview-header .eyebrow { color: var(--green-bright); }
+.tournament-overview-header { position: relative; padding: 42px; border-radius: 8px; background: linear-gradient(135deg, var(--tournament-primary, #143e33), #091f18); color: white; }
+.tournament-overview-logo { position: absolute; right: 42px; top: 42px; width: 100px; height: 100px; object-fit: contain; }
+.tournament-overview-header .eyebrow { color: var(--tournament-secondary, var(--green-bright)); }
 .tournament-overview-header h1 { margin: 0 0 8px; font-family: "Oswald", sans-serif; text-transform: uppercase; font-size: 44px; }
 .tournament-overview-header p:last-child { color: #bfcac5; margin: 0; }
 .overview-podium { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }

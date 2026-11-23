@@ -108,6 +108,9 @@ Edit `data/tournaments.json`.
     "teams": "24",
     "hosts": "Qatar",
     "dates": "11/06/2026 - 19/07/2026",
+    "logo": "assets/media/qfa-nations-cup.png",
+    "primaryColor": "#147d64",
+    "secondaryColor": "#b9ff66",
     "champion": "TBD",
     "runnerUp": "TBD",
     "third": "TBD"
@@ -122,6 +125,9 @@ Tournament field guidance:
 - `teams`: Number of participating teams.
 - `hosts`: Host nation or a comma-separated list.
 - `dates`: Display dates in the format `dd/mm/yyyy - dd/mm/yyyy`.
+- `logo`: Optional tournament logo path, for example `assets/media/tournament-logo.png`.
+- `primaryColor`: Optional two-color theme primary hex value. Defaults to `#147d64`.
+- `secondaryColor`: Optional two-color theme accent hex value. Defaults to `#b9ff66`.
 - `champion`, `runnerUp`, `third`: Use a country name or `"TBD"`.
 - Tournament positions set to `"TBD"` are hidden from public tournament pages.
 

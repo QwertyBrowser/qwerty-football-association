@@ -4,7 +4,7 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 42% 58%;
-  background: linear-gradient(120deg, #174f40 0%, #0d3329 55%, #09241e 100%);
+  background: linear-gradient(120deg, var(--tournament-primary, #174f40) 0%, var(--tournament-primary, #0d3329) 55%, #09241e 100%);
   color: white;
   position: relative;
   box-shadow: 0 18px 50px rgba(21, 42, 34, .12);
@@ -19,12 +19,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
-  text-shadow: 0 1px 8px rgba(0,0,0,.45);
+  color: #000;
+  text-shadow: none;
 }
 .match-card[style] .match-meta,
 .match-card[style] strong {
-  color: white;
+  color: #000;
 }
 .spotlight-section-heading {
   margin-bottom: 18px;
@@ -133,7 +133,7 @@
   text-align: center;
 }
 .eyebrow { margin: 0 0 12px; text-transform: uppercase; letter-spacing: 1.8px; font-size: 12px; font-weight: 800; color: var(--green); }
-.hero .eyebrow { color: var(--green-bright); }
+.hero .eyebrow { color: var(--tournament-secondary, var(--green-bright)); }
 .hero h1 {
   font-family: "Oswald", sans-serif;
   font-size: clamp(38px, 5vw, 72px);
@@ -187,7 +187,7 @@
 
 .match-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .match-card {
-  border: 1px solid var(--line);
+  border: 1px solid var(--tournament-primary, var(--line));
   background: var(--card);
   border-radius: 7px;
   padding: 18px;

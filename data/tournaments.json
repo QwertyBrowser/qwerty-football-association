@@ -5,6 +5,9 @@
     "teams": "48",
     "hosts": "United States",
     "dates": "20/11/2026 - 30/12/2026",
+    "logo": "assets/logos/qfanc2026.png",
+    "primaryColor": "#147d64",
+    "secondaryColor": "#b9ff66",
     "champion": "TBD",
     "runnerUp": "TBD",
     "third": "TBD"
@@ -15,6 +18,9 @@
     "teams": "16",
     "hosts": "Germany",
     "dates": "29/09/2026 - 30/09/2026",
+    "logo": "assets/logos/2026eura.png",
+    "primaryColor": "#aa0c0c",
+    "secondaryColor": "#dfb44b",
     "champion": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England",
     "runnerUp": "🇵🇹 Portugal",
     "third": "🇰🇷 South Korea"

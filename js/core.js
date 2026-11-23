@@ -130,3 +130,24 @@ function matchThumbnailStyle(match) {
   const thumbnail = encodeURI(match.thumbnail).replace(/'/g, "%27").replace(/"/g, "%22");
   return `style="--match-thumbnail: url('${thumbnail}'); background-image: linear-gradient(120deg, rgba(23,79,64,.78), rgba(9,36,30,.92)), var(--match-thumbnail);"`;
 }
+
+function validThemeColor(value, fallback) {
+  return /^#[0-9a-f]{6}$/i.test(String(value || "")) ? value : fallback;
+}
+
+function tournamentTheme(tournament) {
+  return {
+    primary: validThemeColor(tournament && tournament.primaryColor, "#147d64"),
+    secondary: validThemeColor(tournament && tournament.secondaryColor, "#b9ff66")
+  };
+}
+
+function tournamentThemeStyle(tournament) {
+  const theme = tournamentTheme(tournament);
+  return `--tournament-primary:${theme.primary};--tournament-secondary:${theme.secondary};`;
+}
+
+function tournamentLogoMarkup(tournament, className = "tournament-logo") {
+  if (!tournament || !tournament.logo) return "";
+  return `<img class="${className}" src="${escapeHtml(tournament.logo)}" alt="${escapeHtml(tournament.name)} logo">`;
+}

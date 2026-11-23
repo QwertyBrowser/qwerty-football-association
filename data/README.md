@@ -9,4 +9,6 @@ Edit these files through GitHub or a local text editor.
 
 Set a match's `"featured"` property to `true` for the homepage spotlight. A maximum of six matches should be featured.
 
+Tournament records can also include `"logo"`, `"primaryColor"`, and `"secondaryColor"`. Use six-digit hex values such as `"#147d64"` and `"#b9ff66"`.
+
 Use `"TBD"` for unfinished tournament positions; the public site hides TBD podium positions.

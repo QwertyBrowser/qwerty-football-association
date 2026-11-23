@@ -32,11 +32,38 @@ function renderHome() {
     </div>`;
 }
 
+function renderGroupedMatches(matches, renderMatch, layout) {
+  const groups = new Map();
+  matches.forEach(match => {
+    const key = match.date || "date-tbc";
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(match);
+  });
+  return [...groups].map(([date, dayMatches]) => `
+    <section class="match-day-group">
+      <h3 class="match-day-heading">${date === "date-tbc" ? "Date TBC" : matchDayLabel(date)}</h3>
+      <div class="${layout === "cards" ? "match-grid" : "full-match-list"}">${dayMatches.map(renderMatch).join("")}</div>
+    </section>`).join("");
+}
+
+function matchDayLabel(date) {
+  const parsedDate = new Date(`${date}T12:00:00Z`);
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    day: "numeric", month: "long", year: "numeric", timeZone: "UTC"
+  }).formatToParts(parsedDate);
+  const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
+  return `${values.day} ${values.month}, ${values.year}`;
+}
+
 function renderHero(match) {
   const score = hasConfirmedScore(match) ? `${match.score1}–${match.score2}` : "vs.";
   const extras = [match.aet ? "(a.e.t.)" : "", match.penalties ? `Penalties ${match.penalties}` : ""].filter(Boolean).join(" · ");
+  const tournament = data.tournaments.find(item => item.name === match.tournament);
+  const themeStyle = tournamentThemeStyle(tournament);
+  const thumbnailStyle = matchThumbnailStyle(match).replace(/^style="/, "").replace(/"$/, "");
+  const heroStyle = `style="${themeStyle}${thumbnailStyle ? `;${thumbnailStyle}` : ""}"`;
   return `
-    <article class="hero" ${matchThumbnailStyle(match)}>
+    <article class="hero" ${heroStyle}>
       <div class="hero-copy">
         <div class="match-title-bar"><p class="eyebrow">${escapeHtml(match.tournament)} · ${escapeHtml(match.round)}</p></div>
         <h1>${escapeHtml(match.team1)}<br>${escapeHtml(match.team2)}</h1>
@@ -61,8 +88,11 @@ function renderMatchCard(match) {
   const team1Score = match.score1 === "" || match.score1 == null ? "" : match.score1;
   const team2Score = match.score2 === "" || match.score2 == null ? "" : match.score2;
   const scoreConfirmed = hasConfirmedScore(match);
+  const tournament = data.tournaments.find(item => item.name === match.tournament);
+  const themeStyle = tournamentThemeStyle(tournament);
+  const thumbnailStyle = matchThumbnailStyle(match).replace(/^style="/, "").replace(/"$/, "");
   return `
-    <article class="match-card" data-match-id="${match.id}" ${matchThumbnailStyle(match)}>
+    <article class="match-card" data-match-id="${match.id}" style="${themeStyle}${thumbnailStyle ? `;${thumbnailStyle}` : ""}">
       <div class="match-meta"><span>${escapeHtml(match.tournament)}</span><span>${dateLabel(match.date)}</span></div>
       <div class="match-card-team"><span class="flag">${flag(match.team1)}</span><strong>${escapeHtml(match.team1)}</strong><span class="card-score">${scoreConfirmed ? team1Score : ""}</span></div>
       <div class="match-card-team"><span class="flag">${flag(match.team2)}</span><strong>${escapeHtml(match.team2)}</strong><span class="card-score">${scoreConfirmed ? team2Score : ""}</span></div>
@@ -78,20 +108,21 @@ function renderMatchesPage() {
       <div class="section-heading" style="margin-top:0"><div><p class="eyebrow">Results archive</p><h2>Matches</h2></div></div>
       <div class="filter-bar">${tournaments.map((name,i) => `<button class="filter-chip ${i===0?"active":""}" data-filter="${escapeHtml(name)}">${escapeHtml(name)}</button>`).join("")}</div>
       <div class="section-heading"><h2>Upcoming matches</h2></div>
-      <div class="full-match-list match-section" data-section="upcoming">${upcoming.length ? upcoming.map(renderFullMatchRow).join("") : `<div class="empty-state compact">No upcoming matches scheduled.</div>`}</div>
+      <div class="match-section" data-section="upcoming">${upcoming.length ? renderGroupedMatches(upcoming, renderFullMatchRow, "rows") : `<div class="empty-state compact">No upcoming matches scheduled.</div>`}</div>
       <div class="section-heading"><h2>Results</h2></div>
-      <div class="full-match-list match-section" data-section="results">${results.length ? results.map(renderFullMatchRow).join("") : `<div class="empty-state compact">No match results yet.</div>`}</div>
+      <div class="match-section" data-section="results">${results.length ? renderGroupedMatches(results, renderFullMatchRow, "rows") : `<div class="empty-state compact">No match results yet.</div>`}</div>
     </div>`;
 }
 
 function renderFullMatchRow(match) {
+  const tournament = data.tournaments.find(item => item.name === match.tournament);
   return `
-    <article class="full-match-row" data-match-id="${match.id}" data-tournament="${escapeHtml(match.tournament)}">
+    <article class="full-match-row" data-match-id="${match.id}" data-tournament="${escapeHtml(match.tournament)}" style="${tournamentThemeStyle(tournament)}">
       <div class="row-date">${dateLabel(match.date)}</div>
       <div class="row-teams">
-        <div class="row-team"><span class="flag">${flag(match.team1)}</span><span>${escapeHtml(match.team1)}</span></div>
+        <div class="row-team"><span>${escapeHtml(match.team1)}</span><span class="flag">${flag(match.team1)}</span></div>
         <div class="row-score">${scoreText(match) || "vs."}</div>
-        <div class="row-team"><span>${escapeHtml(match.team2)}</span><span class="flag">${flag(match.team2)}</span></div>
+        <div class="row-team"><span class="flag">${flag(match.team2)}</span><span>${escapeHtml(match.team2)}</span></div>
       </div>
       <div class="row-round">${escapeHtml(match.round)}</div>
     </article>`;
@@ -109,9 +140,10 @@ function tournamentCard(t) {
   const podium = [
     ["Champions",t.champion],["Runners-up",t.runnerUp],["Third place",t.third]
   ].filter(([,name]) => name && name !== "TBD").map(([label,name]) => `<div><span class="podium-label">${label}</span><span class="podium-name">${escapeHtml(name)}</span></div>`).join("");
+  const logo = tournamentLogoMarkup(t, "tournament-card-logo");
   return `
-    <article class="tournament-card" data-tournament-id="${escapeHtml(t.id)}">
-      <div class="tournament-banner"><h3>${escapeHtml(t.name)}</h3><p>${escapeHtml(t.hosts || "Host nation TBD")}</p></div>
+    <article class="tournament-card" data-tournament-id="${escapeHtml(t.id)}" style="${tournamentThemeStyle(t)}">
+      <div class="tournament-banner">${logo}<div><h3>${escapeHtml(t.name)}</h3><p>${escapeHtml(t.hosts || "Host nation TBD")}</p></div></div>
       <div class="tournament-body">
         ${podium || `<div><span class="podium-label">Status</span><span class="podium-name">In progress</span></div>`}
         <div><span class="podium-label">Teams</span><span class="podium-name">${escapeHtml(t.teams || "—")}</span></div>
@@ -131,6 +163,12 @@ function renderMatchOverview(id) {
     : "";
   const matchNumber = match.matchNumber ? `Match ${escapeHtml(match.matchNumber)} · ` : "";
   const matchTime = match.time ? escapeHtml(match.time) : (isUpcoming ? "Time TBC" : "");
+  const tournament = data.tournaments.find(item => item.name === match.tournament);
+  const themeStyle = tournamentThemeStyle(tournament);
+  const matchThumbnail = matchThumbnailStyle(match).replace(/^style="/, "").replace(/"$/, "");
+  const tournamentLogo = tournament && tournament.logo
+    ? `<img class="match-tournament-logo" src="${escapeHtml(tournament.logo)}" alt="${escapeHtml(tournament.name)} logo">`
+    : "";
   const team1Goals = (match.goals1 || []).map(goal => `<li><span>${escapeHtml(goal.minute)}’</span><strong>${escapeHtml(goal.name)}</strong>${goal.own ? " <span>(OG)</span>" : ""}</li>`).join("");
   const team2Goals = (match.goals2 || []).map(goal => `<li><span>${escapeHtml(goal.minute)}’</span><strong>${escapeHtml(goal.name)}</strong>${goal.own ? " <span>(OG)</span>" : ""}</li>`).join("");
   const penaltiesList = (match.penaltyTakers || []).map(taker =>
@@ -156,9 +194,10 @@ function renderMatchOverview(id) {
   return `
     <div class="match-overview-page">
       <button class="back-button" data-view="matches">← Back to matches</button>
-      <article class="match-sheet" ${matchThumbnailStyle(match)}>
+      <article class="match-sheet" style="${themeStyle}${matchThumbnail ? `;${matchThumbnail}` : ""}">
         <header class="match-sheet-top">
           <div class="match-sheet-context">${matchNumber}${escapeHtml(match.round)}</div>
+          <div class="match-tournament-mark">${tournamentLogo}</div>
           <div class="match-sheet-datetime">${matchTime}${matchTime && match.date ? " · " : ""}${dateLabel(match.date)}</div>
         </header>
 
@@ -215,19 +254,21 @@ function renderTournamentOverview(id) {
   const podium = [
     ["Champions",tournament.champion],["Runners-up",tournament.runnerUp],["Third place",tournament.third]
   ].filter(([,name]) => name && name !== "TBD");
+  const tournamentLogo = tournamentLogoMarkup(tournament, "tournament-overview-logo");
   return `
     <div class="page overview-page">
       <button class="back-button" data-view="tournaments">← Back to tournaments</button>
-      <section class="tournament-overview-header">
+      <section class="tournament-overview-header" style="${tournamentThemeStyle(tournament)}">
+        ${tournamentLogo}
         <p class="eyebrow">Tournament overview</p>
         <h1>${escapeHtml(tournament.name)}</h1>
         <p>${escapeHtml(tournament.hosts || "Host nation TBD")} · ${escapeHtml(tournament.dates || "")}</p>
       </section>
       ${podium.length ? `<div class="overview-podium">${podium.map(([label,name]) => `<div><span>${escapeHtml(label)}</span><strong>${escapeHtml(name)}</strong></div>`).join("")}</div>` : ""}
       <div class="section-heading"><h2>Upcoming matches</h2></div>
-      <div class="full-match-list">${upcoming.length ? upcoming.map(renderFullMatchRow).join("") : `<div class="empty-state compact">No upcoming matches.</div>`}</div>
+      ${upcoming.length ? renderGroupedMatches(upcoming, renderFullMatchRow, "rows") : `<div class="empty-state compact">No upcoming matches.</div>`}
       <div class="section-heading"><h2>Recent matches</h2></div>
-      <div class="full-match-list">${recent.length ? recent.map(renderFullMatchRow).join("") : `<div class="empty-state compact">No recent matches.</div>`}</div>
+      ${recent.length ? renderGroupedMatches(recent, renderFullMatchRow, "rows") : `<div class="empty-state compact">No recent matches.</div>`}
     </div>`;
 }
 

@@ -29,6 +29,10 @@ document.addEventListener("click", e => {
     e.target.classList.add("active");
     const filter = e.target.dataset.filter;
     document.querySelectorAll(".full-match-row").forEach(row => row.hidden = filter !== "All" && row.dataset.tournament !== filter);
+    document.querySelectorAll(".match-day-group").forEach(group => {
+      const rows = group.querySelectorAll(".full-match-row");
+      group.hidden = rows.length > 0 && [...rows].every(row => row.hidden);
+    });
   }
 });
 

@@ -92,6 +92,7 @@
     text-align: center;
   }
   .match-sheet-top::before { display: none; }
+  .match-tournament-mark { display: none; }
   .match-sheet-context,
   .match-sheet-datetime { grid-column: 1; grid-row: auto; text-align: center; }
   .match-sheet-result {
