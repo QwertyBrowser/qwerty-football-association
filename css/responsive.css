@@ -26,7 +26,7 @@
   .spotlight-grid.spotlight-3,
   .spotlight-grid.spotlight-4,
   .spotlight-grid.spotlight-5,
-  .spotlight-grid.spotlight-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spotlight-grid.spotlight-6 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   .spotlight-grid.spotlight-1 .hero { grid-template-columns: 1fr; }
   .spotlight-grid.spotlight-1 .hero-copy { padding: 38px 28px 24px; }
   .spotlight-grid:not(.spotlight-1) .hero-copy { padding-left: 18px; padding-right: 18px; }
@@ -51,7 +51,7 @@
   .spotlight-grid.spotlight-3,
   .spotlight-grid.spotlight-4,
   .spotlight-grid.spotlight-5,
-  .spotlight-grid.spotlight-6 { grid-template-columns: 1fr; }
+  .spotlight-grid.spotlight-6 { grid-template-columns: 1fr !important; }
   .match-title-bar .eyebrow { white-space: normal; }
   .brand span:last-child { display: none; }
   .main-nav { margin-left: auto; }

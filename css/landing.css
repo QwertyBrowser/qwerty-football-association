@@ -43,10 +43,10 @@
 .spotlight-grid.spotlight-3,
 .spotlight-grid.spotlight-5,
 .spotlight-grid.spotlight-6 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
 }
 .spotlight-grid.spotlight-4 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 }
 .spotlight-grid.spotlight-1 .hero {
   grid-template-columns: 42% 58%;
