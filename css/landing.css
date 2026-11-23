@@ -187,7 +187,7 @@
 
 .match-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .match-card {
-  border: 1px solid var(--tournament-primary, var(--line));
+  border: 2px solid var(--tournament-primary, var(--line));
   background: var(--card);
   border-radius: 7px;
   padding: 18px;
