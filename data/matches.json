@@ -1,7 +1,2561 @@
 [
   {
+    "id": "euras2026-match(1)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group A",
+    "team1": "Poland",
+    "team2": "United Arab Emirates",
+    "score1": "1",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Buksa",
+        "minute": "46",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "C. Lucas",
+        "minute": "77",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Michael Oliver",
+    "attendance": "55416",
+    "stadium": "Stadion Narodowy",
+    "city": "Warsaw",
+    "country": "Germany",
+    "date": "2026-09-01",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(2)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group A",
+    "team1": "South Korea",
+    "team2": "Slovakia",
+    "score1": "2",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Heung-min",
+        "minute": "29 (pen.)",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Wilton Pereira Sampaio",
+    "attendance": "46394",
+    "stadium": "Silesian Stadium",
+    "city": "Katowice",
+    "country": "Germany",
+    "date": "2026-09-01",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(3)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group B",
+    "team1": "Germany",
+    "team2": "Uzbekistan",
+    "score1": "1",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Sané",
+        "minute": "78",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Danny Makkelie",
+    "attendance": "69213",
+    "stadium": "Allianz Arena",
+    "city": "Munich",
+    "country": "Germany",
+    "date": "2026-09-02",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(4)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group C",
+    "team1": "Spain",
+    "team2": "Iran",
+    "score1": "0",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Hosseinzadeh",
+        "minute": "12",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Clément Turpin",
+    "attendance": "68293",
+    "stadium": "Olympiastadion",
+    "city": "Berlin",
+    "country": "Germany",
+    "date": "2026-09-02",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(5)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group B",
+    "team1": "Sweden",
+    "team2": "Qatar",
+    "score1": "2",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Isak",
+        "minute": "12",
+        "own": false
+      },
+      {
+        "name": "Gyökeres",
+        "minute": "43",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Szymon Marciniak",
+    "attendance": "48496",
+    "stadium": "Deutsche Bank Park",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "date": "2026-09-03",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(6)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group C",
+    "team1": "Italy",
+    "team2": "Japan",
+    "score1": "2",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Chiesa",
+        "minute": "31",
+        "own": false
+      },
+      {
+        "name": "Chiesa",
+        "minute": "88",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Slavko Vinčić",
+    "attendance": "50394",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "country": "Germany",
+    "date": "2026-09-03",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(7)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group D",
+    "team1": "Switzerland",
+    "team2": "Thailand",
+    "score1": "0",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Horacio Elizondo",
+    "attendance": "40183",
+    "stadium": "Gdańsk Stadium",
+    "city": "Gdańsk",
+    "country": "Germany",
+    "date": "2026-09-04",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(8)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group D",
+    "team1": "Saudi Arabia",
+    "team2": "Austria",
+    "score1": "1",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Al-Shehri",
+        "minute": "48",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Ivan Bebek",
+    "attendance": "32194",
+    "stadium": "Henryk Reyman Municipal Stadium",
+    "city": "Kraków",
+    "country": "Germany",
+    "date": "2026-09-04",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(9)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group E",
+    "team1": "England",
+    "team2": "Belgium",
+    "score1": "2",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Kane",
+        "minute": "28 (pen.)",
+        "own": false
+      },
+      {
+        "name": "Bellingham",
+        "minute": "51",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Jonathon Almar",
+    "attendance": "53849",
+    "stadium": "MHPArena",
+    "city": "Stuttgart",
+    "country": "Germany",
+    "date": "2026-09-05",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(10)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group E",
+    "team1": "Portugal",
+    "team2": "Croatia",
+    "score1": "3",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Félix",
+        "minute": "16",
+        "own": false
+      },
+      {
+        "name": "Félix",
+        "minute": "64",
+        "own": false
+      },
+      {
+        "name": "Fernandes",
+        "minute": "35",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Facundo Tello",
+    "attendance": "45204",
+    "stadium": "Red Bull Arena",
+    "city": "Leipzig",
+    "country": "Germany",
+    "date": "2026-09-05",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(11)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group F",
+    "team1": "Oman",
+    "team2": "Vietnam",
+    "score1": "1",
+    "score2": "2",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Al-Ghafri",
+        "minute": "76",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Nguyễn Hoàng Đức",
+        "minute": "18",
+        "own": false
+      },
+      {
+        "name": "Nguyễn Tài Lộc",
+        "minute": "32",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Prekash Subram",
+    "attendance": "69521",
+    "stadium": "Allianz Arena",
+    "city": "Munich",
+    "country": "Germany",
+    "date": "2026-09-05",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(12)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group F",
+    "team1": "China",
+    "team2": "Jordan",
+    "score1": "1",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Wu Lei",
+        "minute": "73",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "César Arturo Ramos",
+    "attendance": "48382",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "country": "Germany",
+    "date": "2026-09-05",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(13)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group G",
+    "team1": "Australia",
+    "team2": "Bahrain",
+    "score1": "3",
+    "score2": "2",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Touré",
+        "minute": "7",
+        "own": false
+      },
+      {
+        "name": "Touré",
+        "minute": "22",
+        "own": false
+      },
+      {
+        "name": "Touré",
+        "minute": "61",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Abdulkarim",
+        "minute": "38",
+        "own": false
+      },
+      {
+        "name": "Abdulkarim",
+        "minute": "45+4",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Carlos Mendoza",
+    "attendance": "34381",
+    "stadium": "Poznań Stadium",
+    "city": "Poznań",
+    "country": "Germany",
+    "date": "2026-09-06",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(14)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group G",
+    "team1": "Singapore",
+    "team2": "Iraq",
+    "score1": "0",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Hussein",
+        "minute": "7",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Ismail Elfath",
+    "attendance": "42541",
+    "stadium": "Wrocław Stadium",
+    "city": "Wrocław",
+    "country": "Germany",
+    "date": "2026-09-06",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(15)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group H",
+    "team1": "France",
+    "team2": "Ukraine",
+    "score1": "2",
+    "score2": "2",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Mbappé",
+        "minute": "17",
+        "own": false
+      },
+      {
+        "name": "Mbappé",
+        "minute": "43",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Tsyhankov",
+        "minute": "49",
+        "own": false
+      },
+      {
+        "name": "Malinovskyi",
+        "minute": "85",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Daniele Orsato",
+    "attendance": "40827",
+    "stadium": "Gdańsk Stadium",
+    "city": "Gdańsk",
+    "country": "Germany",
+    "date": "2026-09-06",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(16)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group H",
+    "team1": "Netherlands",
+    "team2": "Denmark",
+    "score1": "3",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Gakpo",
+        "minute": "9",
+        "own": false
+      },
+      {
+        "name": "Gakpo",
+        "minute": "43",
+        "own": false
+      },
+      {
+        "name": "Gakpo",
+        "minute": "45+3",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Fernando Hernández Gómez",
+    "attendance": "51291",
+    "stadium": "Stadion Narodowy",
+    "city": "Warsaw",
+    "country": "Germany",
+    "date": "2026-09-06",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(17)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group A",
+    "team1": "Poland",
+    "team2": "South Korea",
+    "score1": "4",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Lewandowski",
+        "minute": "13",
+        "own": false
+      },
+      {
+        "name": "Lewandowski",
+        "minute": "38",
+        "own": false
+      },
+      {
+        "name": "Lewandowski",
+        "minute": "90+4",
+        "own": false
+      },
+      {
+        "name": "Szymański",
+        "minute": "53",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Hyeon-gyu",
+        "minute": "16",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Felix Zwayer",
+    "attendance": "54923",
+    "stadium": "Stadion Narodowy",
+    "city": "Warsaw",
+    "country": "Germany",
+    "date": "2026-09-07",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(18)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group A",
+    "team1": "Slovakia",
+    "team2": "United Arab Emirates",
+    "score1": "2",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Haraslín",
+        "minute": "56",
+        "own": false
+      },
+      {
+        "name": "Tupta",
+        "minute": "70",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Raphael Claus",
+    "attendance": "53283",
+    "stadium": "Silesian Stadium",
+    "city": "Katowice",
+    "country": "Germany",
+    "date": "2026-09-07",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(19)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group B",
+    "team1": "Germany",
+    "team2": "Sweden",
+    "score1": "1",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Musiala",
+        "minute": "4",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Gyökeres",
+        "minute": "47",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Facundo Tello",
+    "attendance": "69382",
+    "stadium": "Allianz Arena",
+    "city": "Munich",
+    "country": "Germany",
+    "date": "2026-09-07",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(20)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group C",
+    "team1": "Spain",
+    "team2": "Japan",
+    "score1": "0",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Maeda",
+        "minute": "45+1",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "César Arturo Ramos",
+    "attendance": "69392",
+    "stadium": "Olympiastadion",
+    "city": "Berlin",
+    "country": "Germany",
+    "date": "2026-09-07",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(21)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group B",
+    "team1": "Uzbekistan",
+    "team2": "Qatar",
+    "score1": "3",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Shomurodov",
+        "minute": "18",
+        "own": false
+      },
+      {
+        "name": "Shomurodov",
+        "minute": "29",
+        "own": false
+      },
+      {
+        "name": "Shomurodov",
+        "minute": "67",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Wilmar Roldán",
+    "attendance": "58281",
+    "stadium": "Deutsche Bank Park",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "date": "2026-09-08",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(22)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group C",
+    "team1": "Italy",
+    "team2": "Iran",
+    "score1": "0",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Ghayedi",
+        "minute": "40",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Szymon Marciniak",
+    "attendance": "54139",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "country": "Germany",
+    "date": "2026-09-08",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(23)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group D",
+    "team1": "Switzerland",
+    "team2": "Austria",
+    "score1": "3",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Xhaka",
+        "minute": "10",
+        "own": false
+      },
+      {
+        "name": "Xhaka",
+        "minute": "32",
+        "own": false
+      },
+      {
+        "name": "Xhaka",
+        "minute": "49",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Horacio Elizondo",
+    "attendance": "33491",
+    "stadium": "Henryk Reyman Municipal Stadium",
+    "city": "Kraków",
+    "country": "Germany",
+    "date": "2026-09-08",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(24)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group D",
+    "team1": "Saudi Arabia",
+    "team2": "Thailand",
+    "score1": "2",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Al-Shehri",
+        "minute": "8",
+        "own": false
+      },
+      {
+        "name": "Al-Shehri",
+        "minute": "14",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Poeiphimai",
+        "minute": "59",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Papa Bakary Gassama",
+    "attendance": "40185",
+    "stadium": "Gdańsk Stadium",
+    "city": "Gdańsk",
+    "country": "Germany",
+    "date": "2026-09-08",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(25)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group E",
+    "team1": "England",
+    "team2": "Croatia",
+    "score1": "3",
+    "score2": "2",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Saka",
+        "minute": "18",
+        "own": false
+      },
+      {
+        "name": "Kane",
+        "minute": "84",
+        "own": false
+      },
+      {
+        "name": "Kane",
+        "minute": "90+7",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Modrić",
+        "minute": "9",
+        "own": false
+      },
+      {
+        "name": "Modrić",
+        "minute": "26",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Kevin Ivanczuk",
+    "attendance": "47193",
+    "stadium": "MHPArena",
+    "city": "Stuttgart",
+    "country": "Germany",
+    "date": "2026-09-09",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(26)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group E",
+    "team1": "Portugal",
+    "team2": "Belgium",
+    "score1": "2",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Neto",
+        "minute": "31",
+        "own": false
+      },
+      {
+        "name": "Ramos",
+        "minute": "66",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Akeesh Arudchelvan",
+    "attendance": "48184",
+    "stadium": "Red Bull Arena",
+    "city": "Leipzig",
+    "country": "Germany",
+    "date": "2026-09-09",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(27)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group F",
+    "team1": "Oman",
+    "team2": "China",
+    "score1": "1",
+    "score2": "2",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Al-Ghafri",
+        "minute": "15",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Abduweli",
+        "minute": "20",
+        "own": false
+      },
+      {
+        "name": "Abduweli",
+        "minute": "90+2",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Priyesh Nath",
+    "attendance": "69483",
+    "stadium": "Allianz Arena",
+    "city": "Munich",
+    "country": "Germany",
+    "date": "2026-09-09",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(28)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group F",
+    "team1": "Vietnam",
+    "team2": "Jordan",
+    "score1": "0",
+    "score2": "3",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Olwan",
+        "minute": "47",
+        "own": false
+      },
+      {
+        "name": "Olwan",
+        "minute": "69",
+        "own": false
+      },
+      {
+        "name": "Olwan",
+        "minute": "74",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Mannel Hauer",
+    "attendance": "48593",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "country": "Germany",
+    "date": "2026-09-09",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(29)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group G",
+    "team1": "Australia",
+    "team2": "Singapore",
+    "score1": "1",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Mabil",
+        "minute": "77",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Fandi",
+        "minute": "35",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Ekvar Sørloth",
+    "attendance": "41394",
+    "stadium": "Poznań Stadium",
+    "city": "Poznań",
+    "country": "Germany",
+    "date": "2026-09-10",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(30)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group G",
+    "team1": "Bahrain",
+    "team2": "Iraq",
+    "score1": "0",
+    "score2": "2",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Yakob",
+        "minute": "84",
+        "own": false
+      },
+      {
+        "name": "Yakob",
+        "minute": "90+1",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Pierre Montiel",
+    "attendance": "41595",
+    "stadium": "Wrocław Stadium",
+    "city": "Wrocław",
+    "country": "Germany",
+    "date": "2026-09-10",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(31)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group H",
+    "team1": "France",
+    "team2": "Netherlands",
+    "score1": "2",
+    "score2": "2",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Mbappé",
+        "minute": "45+2",
+        "own": false
+      },
+      {
+        "name": "Mbappé",
+        "minute": "89",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Gakpo",
+        "minute": "20",
+        "own": false
+      },
+      {
+        "name": "De Jong",
+        "minute": "25",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Markus Jelot",
+    "attendance": "40822",
+    "stadium": "Gdańsk Stadium",
+    "city": "Gdańsk",
+    "country": "Germany",
+    "date": "2026-09-10",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(32)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group H",
+    "team1": "Ukraine",
+    "team2": "Denmark",
+    "score1": "0",
+    "score2": "4",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Højlund",
+        "minute": "3",
+        "own": false
+      },
+      {
+        "name": "Højlund",
+        "minute": "68",
+        "own": false
+      },
+      {
+        "name": "Eriksen",
+        "minute": "35",
+        "own": false
+      },
+      {
+        "name": "Højbjerg",
+        "minute": "79",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Kim Ae-sou",
+    "attendance": "50482",
+    "stadium": "Stadion Narodowy",
+    "city": "Warsaw",
+    "country": "Germany",
+    "date": "2026-09-10",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(33)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group A",
+    "team1": "Poland",
+    "team2": "Slovakia",
+    "score1": "3",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Szymański",
+        "minute": "22",
+        "own": false
+      },
+      {
+        "name": "Zieliński",
+        "minute": "45+2",
+        "own": false
+      },
+      {
+        "name": "Lewandowski",
+        "minute": "75",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Amr Elshennawy",
+    "attendance": "55184",
+    "stadium": "Stadion Narodowy",
+    "city": "Warsaw",
+    "country": "Germany",
+    "date": "2026-09-11",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(34)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group A",
+    "team1": "South Korea",
+    "team2": "United Arab Emirates",
+    "score1": "1",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Gue-sung",
+        "minute": "37",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Giménez",
+        "minute": "35",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Redouane Jiyed",
+    "attendance": "46184",
+    "stadium": "Silesian Stadium",
+    "city": "Katowice",
+    "country": "Germany",
+    "date": "2026-09-11",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(35)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group B",
+    "team1": "Germany",
+    "team2": "Qatar",
+    "score1": "1",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Wirtz",
+        "minute": "21",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Afif",
+        "minute": "55",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Victor Gomes",
+    "attendance": "68272",
+    "stadium": "Allianz Arena",
+    "city": "Munich",
+    "country": "Germany",
+    "date": "2026-09-11",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(36)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group B",
+    "team1": "Uzbekistan",
+    "team2": "Sweden",
+    "score1": "2",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Shomurodov",
+        "minute": "22",
+        "own": false
+      },
+      {
+        "name": "Shomurodov",
+        "minute": "25",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Isak",
+        "minute": "15",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Benjamin Williams",
+    "attendance": "57381",
+    "stadium": "Deutsche Bank Park",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "date": "2026-09-11",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(37)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group C",
+    "team1": "Spain",
+    "team2": "Italy",
+    "score1": "0",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Raspadori",
+        "minute": "78",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Clément Turpin",
+    "attendance": "68481",
+    "stadium": "Olympiastadion",
+    "city": "Berlin",
+    "country": "Germany",
+    "date": "2026-09-12",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(38)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group C",
+    "team1": "Japan",
+    "team2": "Iran",
+    "score1": "1",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Gotō",
+        "minute": "10",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Torabi",
+        "minute": "7",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Néstor Pitana",
+    "attendance": "52483",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "country": "Germany",
+    "date": "2026-09-12",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(39)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group D",
+    "team1": "Switzerland",
+    "team2": "Saudi Arabia",
+    "score1": "1",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Xhaka",
+        "minute": "19",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Al-Shehri",
+        "minute": "10",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Fernando Hernández Gómez",
+    "attendance": "33293",
+    "stadium": "Henryk Reyman Municipal Stadium",
+    "city": "Kraków",
+    "country": "Germany",
+    "date": "2026-09-12",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(40)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group D",
+    "team1": "Austria",
+    "team2": "Thailand",
+    "score1": "2",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Arnautović",
+        "minute": "21",
+        "own": false
+      },
+      {
+        "name": "Kalajdžić",
+        "minute": "60",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Burapha",
+        "minute": "86",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Wilmar Roldán",
+    "attendance": "40129",
+    "stadium": "Gdańsk Stadium",
+    "city": "Gdańsk",
+    "country": "Germany",
+    "date": "2026-09-12",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(41)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group E",
+    "team1": "England",
+    "team2": "Portugal",
+    "score1": "2",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Kane",
+        "minute": "43",
+        "own": false
+      },
+      {
+        "name": "Bellingham",
+        "minute": "78",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Fernando Guerrero",
+    "attendance": "46894",
+    "stadium": "MHPArena",
+    "city": "Stuttgart",
+    "country": "Germany",
+    "date": "2026-09-13",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(42)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group E",
+    "team1": "Croatia",
+    "team2": "Belgium",
+    "score1": "2",
+    "score2": "2",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Kramarić",
+        "minute": "15",
+        "own": false
+      },
+      {
+        "name": "Modrić",
+        "minute": "80",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Lukaku",
+        "minute": "40",
+        "own": false
+      },
+      {
+        "name": "Lukaku",
+        "minute": "82",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Espen Eskås",
+    "attendance": "48102",
+    "stadium": "Red Bull Arena",
+    "city": "Leipzig",
+    "country": "Germany",
+    "date": "2026-09-13",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(43)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group F",
+    "team1": "Oman",
+    "team2": "Jordan",
+    "score1": "1",
+    "score2": "3",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Al-Ghafri",
+        "minute": "84",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Olwan",
+        "minute": "73",
+        "own": false
+      },
+      {
+        "name": "Azaizeh",
+        "minute": "82",
+        "own": false
+      },
+      {
+        "name": "Olwan",
+        "minute": "87",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Victor Gomes",
+    "attendance": "68183",
+    "stadium": "Allianz Arena",
+    "city": "Munich",
+    "country": "Germany",
+    "date": "2026-09-13",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(44)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group F",
+    "team1": "Vietnam",
+    "team2": "China",
+    "score1": "2",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Xuân Son",
+        "minute": "19",
+        "own": false
+      },
+      {
+        "name": "Xuân Son",
+        "minute": "62",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Abduweli",
+        "minute": "45+3",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Facundo Tello",
+    "attendance": "55283",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "country": "Germany",
+    "date": "2026-09-13",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(45)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group G",
+    "team1": "Australia",
+    "team2": "Iraq",
+    "score1": "0",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Hussein",
+        "minute": "39",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Berlin Harmony Tumanan",
+    "attendance": "41182",
+    "stadium": "Poznań Stadium",
+    "city": "Poznań",
+    "country": "Germany",
+    "date": "2026-09-14",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(46)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group G",
+    "team1": "Bahrain",
+    "team2": "Singapore",
+    "score1": "2",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Abdulkarim",
+        "minute": "19",
+        "own": false
+      },
+      {
+        "name": "Abdullatif",
+        "minute": "65",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Jérôme Brisard",
+    "attendance": "41394",
+    "stadium": "Wrocław Stadium",
+    "city": "Wrocław",
+    "country": "Germany",
+    "date": "2026-09-14",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(47)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group H",
+    "team1": "France",
+    "team2": "Denmark",
+    "score1": "3",
+    "score2": "4",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Dembélé",
+        "minute": "9",
+        "own": false
+      },
+      {
+        "name": "Mbappé",
+        "minute": "45+3",
+        "own": false
+      },
+      {
+        "name": "Barcola",
+        "minute": "90+6",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Højbjerg",
+        "minute": "6",
+        "own": false
+      },
+      {
+        "name": "Eriksen",
+        "minute": "21",
+        "own": false
+      },
+      {
+        "name": "Eriksen",
+        "minute": "34",
+        "own": false
+      },
+      {
+        "name": "Højlund",
+        "minute": "90+4",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Issa Sy",
+    "attendance": "41481",
+    "stadium": "Gdańsk Stadium",
+    "city": "Gdańsk",
+    "country": "Germany",
+    "date": "2026-09-14",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(48)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Group H",
+    "team1": "Ukraine",
+    "team2": "Netherlands",
+    "score1": "2",
+    "score2": "2",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Malinovskyi",
+        "minute": "16",
+        "own": false
+      },
+      {
+        "name": "Malinovskyi",
+        "minute": "86",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Gakpo",
+        "minute": "13",
+        "own": false
+      },
+      {
+        "name": "Gakpo",
+        "minute": "44",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Yamashita Yoshimi",
+    "attendance": "51192",
+    "stadium": "Stadion Narodowy",
+    "city": "Warsaw",
+    "country": "Germany",
+    "date": "2026-09-14",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(49)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Round of 16",
+    "team1": "Poland",
+    "team2": "Netherlands",
+    "score1": "0",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Lang",
+        "minute": "59",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Facundo Tello",
+    "attendance": "51292",
+    "stadium": "Silesian Stadium",
+    "city": "Katowice",
+    "country": "Germany",
+    "date": "2026-09-15",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(50)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Round of 16",
+    "team1": "Uzbekistan",
+    "team2": "Australia",
+    "score1": "1",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Sergeev",
+        "minute": "90+5",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Kelvin Tran",
+    "attendance": "79384",
+    "stadium": "Olympiastadion",
+    "city": "Berlin",
+    "country": "Germany",
+    "date": "2026-09-15",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(51)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Round of 16",
+    "team1": "Saudi Arabia",
+    "team2": "Portugal",
+    "score1": "1",
+    "score2": "3",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Al-Ghannam",
+        "minute": "69",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Félix",
+        "minute": "78",
+        "own": false
+      },
+      {
+        "name": "Neto",
+        "minute": "90+2",
+        "own": false
+      },
+      {
+        "name": "Fernandes",
+        "minute": "90+4",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Carlos Mendoza",
+    "attendance": "45129",
+    "stadium": "MHPArena",
+    "city": "Stuttgart",
+    "country": "Germany",
+    "date": "2026-09-16",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(52)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Round of 16",
+    "team1": "England",
+    "team2": "Switzerland",
+    "score1": "0",
+    "score2": "0",
+    "aet": true,
+    "penalties": "6-5",
+    "goals1": [],
+    "goals2": [],
+    "penaltyTakers": [
+      {
+        "name": "Tony",
+        "scored": true
+      },
+      {
+        "name": "Bellingham",
+        "scored": false
+      },
+      {
+        "name": "Saka",
+        "scored": true
+      },
+      {
+        "name": "Gordon",
+        "scored": true
+      },
+      {
+        "name": "Anderson",
+        "scored": true
+      },
+      {
+        "name": "Rice",
+        "scored": true
+      },
+      {
+        "name": "Spence",
+        "scored": true
+      },
+      {
+        "name": "Okafor",
+        "scored": true
+      },
+      {
+        "name": "Vargas",
+        "scored": true
+      },
+      {
+        "name": "Ndoye",
+        "scored": true
+      },
+      {
+        "name": "Sow",
+        "scored": false
+      },
+      {
+        "name": "Aebischer",
+        "scored": true
+      },
+      {
+        "name": "Zakaria",
+        "scored": true
+      },
+      {
+        "name": "Muheim",
+        "scored": false
+      }
+    ],
+    "referee": "Yamashita Yoshimi",
+    "attendance": "51283",
+    "stadium": "Stadion Narodowy",
+    "city": "Warsaw",
+    "country": "Germany",
+    "date": "2026-09-16",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(53)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Round of 16",
+    "team1": "Iraq",
+    "team2": "Germany",
+    "score1": "2",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Al-Hamadi",
+        "minute": "7",
+        "own": false
+      },
+      {
+        "name": "Younis",
+        "minute": "10",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Sané",
+        "minute": "90 (pen.)",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Mahfuzar Rahman",
+    "attendance": "41912",
+    "stadium": "Wrocław Stadium",
+    "city": "Wrocław",
+    "country": "Germany",
+    "date": "2026-09-17",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(54)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Round of 16",
+    "team1": "Iran",
+    "team2": "China",
+    "score1": "1",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Torabi",
+        "minute": "7 (pen.)",
+        "own": false
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Horacio Elizondo",
+    "attendance": "51391",
+    "stadium": "Deutsche Bank Park",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "date": "2026-09-17",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(55)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Round of 16",
+    "team1": "Jordan",
+    "team2": "Italy",
+    "score1": "0",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Pellegrini",
+        "minute": "30",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Noumandiez Doué",
+    "attendance": "51394",
+    "stadium": "Red Bull Arena",
+    "city": "Leipzig",
+    "country": "Germany",
+    "date": "2026-09-18",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(56)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Round of 16",
+    "team1": "Denmark",
+    "team2": "South Korea",
+    "score1": "0",
+    "score2": "0",
+    "aet": true,
+    "penalties": "3-4",
+    "goals1": [],
+    "goals2": [],
+    "penaltyTakers": [
+      {
+        "name": "Højlund",
+        "scored": true
+      },
+      {
+        "name": "Skov Olsen",
+        "scored": false
+      },
+      {
+        "name": "Damsgaard",
+        "scored": false
+      },
+      {
+        "name": "Delaney",
+        "scored": true
+      },
+      {
+        "name": "Nørgaard",
+        "scored": true
+      },
+      {
+        "name": "Gue-sung",
+        "scored": true
+      },
+      {
+        "name": "Hyeon-gyu",
+        "scored": true
+      },
+      {
+        "name": "Heung-min",
+        "scored": false
+      },
+      {
+        "name": "Kang-in",
+        "scored": true
+      },
+      {
+        "name": "Dong-gyeong",
+        "scored": true
+      }
+    ],
+    "referee": "Victor Gomes",
+    "attendance": "49293",
+    "stadium": "Gdańsk Stadium",
+    "city": "Gdańsk",
+    "country": "Germany",
+    "date": "2026-09-18",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(57)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Quarterfinals",
+    "team1": "Netherlands",
+    "team2": "Iraq",
+    "score1": "1",
+    "score2": "1",
+    "aet": true,
+    "penalties": "4-3",
+    "goals1": [
+      {
+        "name": "Lang",
+        "minute": "3",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Al-Hamadi",
+        "minute": "45+1",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [
+      {
+        "name": "Depay",
+        "scored": true
+      },
+      {
+        "name": "Malen",
+        "scored": false
+      },
+      {
+        "name": "Lang",
+        "scored": false
+      },
+      {
+        "name": "Koopmeiners",
+        "scored": false
+      },
+      {
+        "name": "Reijnders",
+        "scored": true
+      },
+      {
+        "name": "de Jong",
+        "scored": true
+      },
+      {
+        "name": "Dumfries",
+        "scored": true
+      },
+      {
+        "name": "Ali",
+        "scored": true
+      },
+      {
+        "name": "Al Hamadi",
+        "scored": false
+      },
+      {
+        "name": "Qasem",
+        "scored": false
+      },
+      {
+        "name": "Sher",
+        "scored": true
+      },
+      {
+        "name": "Yakob",
+        "scored": false
+      },
+      {
+        "name": "Ismail",
+        "scored": true
+      },
+      {
+        "name": "Hashim",
+        "scored": false
+      }
+    ],
+    "referee": "Priyesh Nath",
+    "attendance": "50192",
+    "stadium": "Silesian Stadium",
+    "city": "Katowice",
+    "country": "Germany",
+    "date": "2026-09-20",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(58)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Quarterfinals",
+    "team1": "Uzbekistan",
+    "team2": "South Korea",
+    "score1": "1",
+    "score2": "2",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Shomurodov",
+        "minute": "74",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Gue-sung",
+        "minute": "32",
+        "own": false
+      },
+      {
+        "name": "Hyeon-gyu",
+        "minute": "42",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Michael Oliver",
+    "attendance": "46291",
+    "stadium": "Volksparkstadion",
+    "city": "Hamburg",
+    "country": "Germany",
+    "date": "2026-09-21",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(59)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Quarterfinals",
+    "team1": "Iran",
+    "team2": "England",
+    "score1": "0",
+    "score2": "2",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Bellingham",
+        "minute": "44",
+        "own": false
+      },
+      {
+        "name": "Bellingham",
+        "minute": "55",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Szymon Marciniak",
+    "attendance": "51291",
+    "stadium": "Deutsche Bank Park",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "date": "2026-09-22",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(60)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Quarterfinals",
+    "team1": "Portugal",
+    "team2": "Italy",
+    "score1": "2",
+    "score2": "0",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Fernandes",
+        "minute": "51",
+        "own": false
+      },
+      {
+        "name": "Di Lorenzo",
+        "minute": "90+1",
+        "own": true
+      }
+    ],
+    "goals2": [],
+    "penaltyTakers": [],
+    "referee": "Berlin Harmony Tumanan",
+    "attendance": "49194",
+    "stadium": "Wrocław Stadium",
+    "city": "Wrocław",
+    "country": "Germany",
+    "date": "2026-09-23",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(61)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Semifinals",
+    "team1": "Netherlands",
+    "team2": "England",
+    "score1": "0",
+    "score2": "3",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Saka",
+        "minute": "19",
+        "own": false
+      },
+      {
+        "name": "Kane",
+        "minute": "40",
+        "own": false
+      },
+      {
+        "name": "Kane",
+        "minute": "90+2",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Wilmar Roldán",
+    "attendance": "43495",
+    "stadium": "Gdańsk Stadium",
+    "city": "Gdańsk",
+    "country": "Germany",
+    "date": "2026-09-25",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(62)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Semifinals",
+    "team1": "South Korea",
+    "team2": "Portugal",
+    "score1": "0",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Leão",
+        "minute": "73",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Berlin Harmony Tumanan",
+    "attendance": "69381",
+    "stadium": "Allianz Arena",
+    "city": "Munich",
+    "country": "Germany",
+    "date": "2026-09-26",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(63)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Bronze Final",
+    "team1": "Netherlands",
+    "team2": "South Korea",
+    "score1": "0",
+    "score2": "6",
+    "aet": false,
+    "penalties": "",
+    "goals1": [],
+    "goals2": [
+      {
+        "name": "Heung-min",
+        "minute": "22",
+        "own": false
+      },
+      {
+        "name": "Heung-min",
+        "minute": "81",
+        "own": false
+      },
+      {
+        "name": "Hyeon-gyu",
+        "minute": "26",
+        "own": false
+      },
+      {
+        "name": "Hyeon-gyu",
+        "minute": "62",
+        "own": false
+      },
+      {
+        "name": "Gue-sung",
+        "minute": "49",
+        "own": false
+      },
+      {
+        "name": "Hyun-jun",
+        "minute": "83",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Michael Oliver",
+    "attendance": "55293",
+    "stadium": "Stadion Narodowy",
+    "city": "Warsaw",
+    "country": "Germany",
+    "date": "2026-09-29",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
+    "id": "euras2026-match(64)",
+    "featured": false,
+    "tournament": "2026 UEFA/AFC Eurasian Championship",
+    "round": "Final",
+    "team1": "England",
+    "team2": "Portugal",
+    "score1": "2",
+    "score2": "1",
+    "aet": false,
+    "penalties": "",
+    "goals1": [
+      {
+        "name": "Saka",
+        "minute": "21",
+        "own": false
+      },
+      {
+        "name": "Kane",
+        "minute": "69",
+        "own": false
+      }
+    ],
+    "goals2": [
+      {
+        "name": "Leão",
+        "minute": "79",
+        "own": false
+      }
+    ],
+    "penaltyTakers": [],
+    "referee": "Clément Turpin",
+    "attendance": "74475",
+    "stadium": "Olympiastadion",
+    "city": "Berlin",
+    "country": "Germany",
+    "date": "2026-09-30",
+    "thumbnail": "",
+    "highlightUrl": "",
+    "highlightFile": ""
+  },
+  {
     "id": "qfanc2026-match1",
-    "featured": true,
+    "featured": false,
     "tournament": "2026 QFA Nations Cup",
     "round": "Group A",
     "team1": "United States",
@@ -25,7 +2579,7 @@
   },
   {
     "id": "qfanc2026-match2",
-    "featured": false,
+    "featured": true,
     "tournament": "2026 QFA Nations Cup",
     "round": "Group A",
     "team1": "South Africa",
@@ -49,7 +2603,7 @@
   },
   {
     "id": "qfanc2026-match3",
-    "featured": false,
+    "featured": true,
     "tournament": "2026 QFA Nations Cup",
     "round": "Group B",
     "team1": "France",
@@ -73,7 +2627,7 @@
   },
   {
     "id": "qfanc2026-match4",
-    "featured": false,
+    "featured": true,
     "tournament": "2026 QFA Nations Cup",
     "round": "Group C",
     "team1": "Morocco",

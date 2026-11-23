@@ -8,5 +8,9 @@
   {"name":"Papua New Guinea","code":"PNG"},{"name":"Paraguay","code":"PAR"},{"name":"Poland","code":"POL"},{"name":"Portugal","code":"POR"},{"name":"Qatar","code":"QAT"},
   {"name":"Republic of Ireland","code":"IRL"},{"name":"Saudi Arabia","code":"KSA"},{"name":"Scotland","code":"SCO"},{"name":"Senegal","code":"SEN"},{"name":"Serbia","code":"SRB"},
   {"name":"South Africa","code":"RSA"},{"name":"South Korea","code":"KOR"},{"name":"Spain","code":"ESP"},{"name":"Sweden","code":"SWE"},{"name":"Switzerland","code":"SUI"},
-  {"name":"Turkey","code":"TUR"},{"name":"Ukraine","code":"UKR"},{"name":"United States","code":"USA"},{"name":"Uruguay","code":"URU"},{"name":"Uzbekistan","code":"UZB"},{"name":"Venezuela","code":"VEN"},{"name":"Wales","code":"WAL"}
+  {"name":"Turkey","code":"TUR"},{"name":"Ukraine","code":"UKR"},{"name":"United States","code":"USA"},{"name":"Uruguay","code":"URU"},{"name":"Uzbekistan","code":"UZB"},{"name":"Venezuela","code":"VEN"},{"name":"Wales","code":"WAL"},
+  {"name":"United Arab Emirates","code":"UAE"},{"name":"Vietnam","code":"VIE"},{"name":"Zimbabwe","code":"ZIM"},{"name":"Slovakia","code":"SVK"},{"name":"Slovenia","code":"SVN"},{"name":"Finland","code":"FIN"},{"name":"Belarus","code":"BLR"},{"name":"Bulgaria","code":"BUL"},{"name":"Bosnia and Herzegovina","code":"BIH"},
+  {"name":"North Macedonia","code":"MKD"},{"name":"Estonia","code":"EST"},{"name":"Latvia","code":"LVA"},{"name":"Lithuania","code":"LTU"},{"name":"Luxembourg","code":"LUX"},{"name":"Malta","code":"MLT"},
+  {"name":"Cyprus","code":"CYP"},{"name":"Iceland","code":"ISL"},{"name":"Liechtenstein","code":"LIE"},{"name":"San Marino","code":"SMR"},{"name":"Andorra","code":"AND"},{"name":"Monaco","code":"MCO"},
+  {"name":"Faroe Islands","code":"FRO"},{"name":"Gibraltar","code":"GIB"}
 ]

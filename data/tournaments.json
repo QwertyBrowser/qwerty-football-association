@@ -8,5 +8,15 @@
     "champion": "TBD",
     "runnerUp": "TBD",
     "third": "TBD"
+  },
+  {
+    "id": "euras2026",
+    "name": "2026 UEFA/AFC Eurasian Championship",
+    "teams": "16",
+    "hosts": "Germany",
+    "dates": "29/09/2026 - 30/09/2026",
+    "champion": "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England",
+    "runnerUp": "🇵🇹 Portugal",
+    "third": "🇰🇷 South Korea"
   }
 ]

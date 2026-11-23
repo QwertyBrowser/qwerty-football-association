@@ -10,12 +10,14 @@ function render() {
 function renderHome() {
   const matches = sortedMatches();
   if (!matches.length) return `<div class="page"><div class="empty-state"><h2>No matches yet</h2><p>Matches will appear after they are added to the content JSON.</p></div></div>`;
-  const featured = matches.filter(match => match.featured).slice(0, 2);
+  const featured = matches.filter(match => match.featured).slice(0, 6);
   const latest = matches.filter(match => !isMatchUpcoming(match));
   const upcoming = matches.filter(isMatchUpcoming).sort((a,b) => (a.date || "").localeCompare(b.date || ""));
   const cards = latest.slice(0, 6);
+  const spotlightTitle = data.settings.spotlightTitle || "Featured matches";
   return `
     <div class="page">
+      ${featured.length ? `<div class="section-heading spotlight-section-heading" style="margin-top:0"><h2>${escapeHtml(spotlightTitle)}</h2></div>` : ""}
       ${featured.length ? `<div class="spotlight-grid spotlight-${featured.length}">${featured.map(renderHero).join("")}</div>` : `<div class="empty-state">No spotlight matches selected.</div>`}
       <div class="section-heading">
         <h2>Latest matches</h2>
@@ -122,6 +124,18 @@ function renderMatchOverview(id) {
   const match = data.matches.find(item => item.id === id);
   if (!match) return `<div class="page"><div class="empty-state"><h2>Match not found</h2><button class="text-button" data-view="matches">Back to matches</button></div></div>`;
   const score = hasConfirmedScore(match) ? `${match.score1}–${match.score2}` : "";
+  const isUpcoming = isMatchUpcoming(match);
+  const resultStatus = score ? "Full Time" : (isUpcoming ? "Upcoming" : "Score TBC");
+  const penaltyNote = match.penalties
+    ? `${match.team1} won ${match.penalties} on penalties`
+    : "";
+  const matchNumber = match.matchNumber ? `Match ${escapeHtml(match.matchNumber)} · ` : "";
+  const matchTime = match.time ? escapeHtml(match.time) : (isUpcoming ? "Time TBC" : "");
+  const team1Goals = (match.goals1 || []).map(goal => `<li><span>${escapeHtml(goal.minute)}’</span><strong>${escapeHtml(goal.name)}</strong>${goal.own ? " <span>(OG)</span>" : ""}</li>`).join("");
+  const team2Goals = (match.goals2 || []).map(goal => `<li><span>${escapeHtml(goal.minute)}’</span><strong>${escapeHtml(goal.name)}</strong>${goal.own ? " <span>(OG)</span>" : ""}</li>`).join("");
+  const penaltiesList = (match.penaltyTakers || []).map(taker =>
+    `<li><span>${taker.scored ? "✓" : "×"}</span><strong>${escapeHtml(taker.name)}</strong></li>`
+  ).join("");
   const goalList = team => (team || []).map(goal =>
     `<li><strong>${escapeHtml(goal.name)}</strong>${goal.minute ? ` ${escapeHtml(goal.minute)}’` : ""}${goal.own ? " · Own goal" : ""}</li>`
   ).join("");
@@ -140,36 +154,50 @@ function renderMatchOverview(id) {
         </div>
       </section>` : "";
   return `
-    <div class="page overview-page">
+    <div class="match-overview-page">
       <button class="back-button" data-view="matches">← Back to matches</button>
-      <article class="match-overview-header" ${matchThumbnailStyle(match)}>
-        <div class="match-title-bar"><p class="eyebrow">${escapeHtml(match.tournament)} · ${escapeHtml(match.round)}</p></div>
-        <div class="match-overview-scoreboard">
-          <div class="score-team"><div class="flag">${flag(match.team1)}</div><span class="team-name">${escapeHtml(match.team1)}</span></div>
-          ${score ? `<div class="overview-score">${score}${match.aet ? "<small>(a.e.t.)</small>" : ""}${match.penalties ? `<small>${escapeHtml(match.penalties)} pens</small>` : ""}</div>` : `<div class="overview-status">${isMatchUpcoming(match) ? "Upcoming" : "vs."}</div>`}
-          <div class="score-team"><div class="flag">${flag(match.team2)}</div><span class="team-name">${escapeHtml(match.team2)}</span></div>
-        </div>
+      <article class="match-sheet" ${matchThumbnailStyle(match)}>
+        <header class="match-sheet-top">
+          <div class="match-sheet-context">${matchNumber}${escapeHtml(match.round)}</div>
+          <div class="match-sheet-datetime">${matchTime}${matchTime && match.date ? " · " : ""}${dateLabel(match.date)}</div>
+        </header>
+
+        <section class="match-sheet-result">
+          <div class="match-side match-side-left">
+            <span class="match-team-dot"></span>
+            <strong>${escapeHtml(match.team1)}</strong>
+            <span class="match-team-flag">${flag(match.team1)}</span>
+          </div>
+
+          <div class="match-score-center">
+            ${score
+              ? `<div class="match-main-score">${escapeHtml(match.team1 === "" ? "" : match.score1)} <span>–</span> ${escapeHtml(match.score2)}</div>`
+              : `<div class="match-main-score match-main-score-vs">vs.</div>`}
+            ${match.aet ? `<div class="match-extra-status">(a.e.t.)</div>` : ""}
+            ${match.penalties ? `<div class="match-extra-status">${escapeHtml(match.penalties)} on penalties</div>` : ""}
+            ${penaltyNote ? `<div class="match-result-note">${escapeHtml(penaltyNote)}</div>` : ""}
+            <div class="match-status-pill">${escapeHtml(resultStatus)}</div>
+          </div>
+
+          <div class="match-side match-side-right">
+            <span class="match-team-flag">${flag(match.team2)}</span>
+            <strong>${escapeHtml(match.team2)}</strong>
+          </div>
+        </section>
+
+        ${(team1Goals || team2Goals || penaltiesList) ? `
+          <section class="match-goals-sheet">
+            <div class="match-goals-side">${team1Goals}</div>
+            <div class="match-goals-center">${penaltiesList ? `<div class="penalty-summary"><span>Penalties</span><ul>${penaltiesList}</ul></div>` : ""}</div>
+            <div class="match-goals-side match-goals-right">${team2Goals}</div>
+          </section>` : ""}
+
+        <footer class="match-sheet-footer">
+          <div class="match-tournament-name">${escapeHtml(match.tournament)}</div>
+          <div class="match-location"><span>${escapeHtml(match.city || "")}</span>${match.city && match.stadium ? "<span class=\"location-dot\">•</span>" : ""}<span>${escapeHtml(match.stadium || "")}</span></div>
+          ${match.referee ? `<div class="match-fact">${escapeHtml(match.referee)}${match.attendance ? ` · ${attendanceLabel(match.attendance)} attendance` : ""}</div>` : ""}
+        </footer>
       </article>
-      <div class="overview-layout">
-        <section class="overview-card">
-          <h3>Match details</h3>
-          ${overviewDetail("Date", dateLabel(match.date))}
-          ${overviewDetail("Round", match.round)}
-          ${overviewDetail("Stadium", match.stadium)}
-          ${overviewDetail("City", [match.city, match.country].filter(Boolean).join(", "))}
-          ${overviewDetail("Referee", match.referee)}
-          ${overviewDetail("Attendance", match.attendance ? attendanceLabel(match.attendance) : "")}
-        </section>
-        <section class="overview-card">
-          <h3>Goalscorers</h3>
-          ${goalList(match.goals1).length || goalList(match.goals2).length ? `
-            <div class="goals-column">
-              <div><span class="overview-team-label">${escapeHtml(match.team1)}</span><ul>${goalList(match.goals1) || "<li>No goals recorded</li>"}</ul></div>
-              <div><span class="overview-team-label">${escapeHtml(match.team2)}</span><ul>${goalList(match.goals2) || "<li>No goals recorded</li>"}</ul></div>
-            </div>` : `<p class="muted-copy">${isMatchUpcoming(match) ? "Goals will appear after the match." : "No goals recorded."}</p>`}
-          ${penalties ? `<div class="penalty-list"><h4>Penalties</h4><ul>${penalties}</ul></div>` : ""}
-        </section>
-      </div>
       ${highlightSection}
     </div>`;
 }

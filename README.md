@@ -14,6 +14,7 @@ A static football/soccer results website that is hosted with GitHub Pages and re
 - `data/matches.json` - Match records
 - `data/tournaments.json` - Tournament records
 - `data/countries.json` - Countries and FIFA codes
+- `data/settings.json` - Homepage and display settings
 - `assets/media/` - Optional thumbnails and highlight videos
 
 ## Editing content
@@ -73,7 +74,7 @@ Edit `data/matches.json`.
 Match field guidance:
 
 - `id`: Unique identifier. Do not change an existing ID unless the match is replaced.
-- `featured`: `true` to place the match in the homepage spotlight. Maximum: 2 matches.
+- `featured`: `true` to place the match in the homepage spotlight. Maximum: 6 matches.
 - `tournament`: Use `Friendly` or the exact name of a tournament in `tournaments.json`.
 - `team1` and `team2`: Country names must exist in `countries.json`.
 - `score1` and `score2`: Leave both values as `""` when the score is not confirmed.
@@ -167,6 +168,22 @@ Supported formats:
 - Thumbnails: PNG, JPG/JPEG, and WebP
 - Highlight videos: MP4, WebM, and MOV
 - Remote highlights: YouTube URL in `highlightUrl`
+
+## Homepage settings template
+
+Edit `data/settings.json`.
+
+```json
+{
+  "spotlightTitle": "Featured matches"
+}
+```
+
+Setting guidance:
+
+- `spotlightTitle`: Heading shown above the homepage match spotlight.
+- Leave the setting as `""` to fall back to `Featured matches`.
+- This value is repository-editable only; it is not shown as an editable field on the public website.
 
 ## Preview locally
 

@@ -8,7 +8,7 @@ const FifaToIso = {
   SWE:"SE", SUI:"CH", TUR:"TR", UKR:"UA", USA:"US", URU:"UY", UZB:"UZ", VEN:"VE"
 };
 
-let data = { customCountries: [], tournaments: [], matches: [], countries: [] };
+let data = { customCountries: [], tournaments: [], matches: [], countries: [], settings: { spotlightTitle:"Featured matches" } };
 let currentView = "home";
 let currentDetailId = null;
 let countryMap = {};
@@ -17,17 +17,19 @@ let countryCodes = {};
 async function loadJsonData() {
   try {
     const timestamp = Date.now();
-    const [countryResponse, tournamentResponse, matchResponse] = await Promise.all([
+    const [countryResponse, tournamentResponse, matchResponse, settingsResponse] = await Promise.all([
       fetch(`data/countries.json?v=${timestamp}`),
       fetch(`data/tournaments.json?v=${timestamp}`),
-      fetch(`data/matches.json?v=${timestamp}`)
+      fetch(`data/matches.json?v=${timestamp}`),
+      fetch(`data/settings.json?v=${timestamp}`)
     ]);
-    if (![countryResponse, tournamentResponse, matchResponse].every(response => response.ok)) {
+    if (![countryResponse, tournamentResponse, matchResponse, settingsResponse].every(response => response.ok)) {
       throw new Error("One or more JSON data files could not be loaded.");
     }
     data.countries = await countryResponse.json();
     data.tournaments = await tournamentResponse.json();
     data.matches = await matchResponse.json();
+    data.settings = await settingsResponse.json();
   } catch (error) {
     console.error("Content JSON load failed:", error);
   }

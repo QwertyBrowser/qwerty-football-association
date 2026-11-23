@@ -26,6 +26,9 @@
 .match-card[style] strong {
   color: white;
 }
+.spotlight-section-heading {
+  margin-bottom: 18px;
+}
 .spotlight-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -33,6 +36,17 @@
 }
 .spotlight-grid.spotlight-1 {
   grid-template-columns: 1fr;
+}
+.spotlight-grid.spotlight-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.spotlight-grid.spotlight-3,
+.spotlight-grid.spotlight-5,
+.spotlight-grid.spotlight-6 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.spotlight-grid.spotlight-4 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .spotlight-grid.spotlight-1 .hero {
   grid-template-columns: 42% 58%;
@@ -61,6 +75,31 @@
 }
 .spotlight-grid .scoreboard {
   margin-top: 18px;
+}
+.spotlight-grid:not(.spotlight-1) .scoreboard {
+  width: 100%;
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 8px;
+  align-items: end;
+}
+.spotlight-grid:not(.spotlight-1) .score-team {
+  width: auto;
+  min-width: 0;
+}
+.spotlight-grid:not(.spotlight-1) .team-name {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.15;
+}
+.spotlight-grid:not(.spotlight-1) .hero .flag {
+  font-size: 48px;
+}
+.spotlight-grid:not(.spotlight-1) .score {
+  min-width: 72px;
+  font-size: 42px;
 }
 .hero::after {
   content: "";
