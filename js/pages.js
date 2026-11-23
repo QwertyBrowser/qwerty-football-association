@@ -11,7 +11,7 @@ function renderHome() {
   const matches = sortedMatches();
   if (!matches.length) return `<div class="page"><div class="empty-state"><h2>No matches yet</h2><p>Matches will appear after they are added to the content JSON.</p></div></div>`;
   const featured = matches.filter(match => match.featured).slice(0, 2);
-  const latest = matches.filter(match => !match.featured && !isMatchUpcoming(match));
+  const latest = matches.filter(match => !isMatchUpcoming(match));
   const upcoming = matches.filter(isMatchUpcoming).sort((a,b) => (a.date || "").localeCompare(b.date || ""));
   const cards = latest.slice(0, 6);
   return `
@@ -31,7 +31,7 @@ function renderHome() {
 }
 
 function renderHero(match) {
-  const score = hasConfirmedScore(match) ? `${match.score1}–${match.score2}` : "";
+  const score = hasConfirmedScore(match) ? `${match.score1}–${match.score2}` : "vs.";
   const extras = [match.aet ? "(a.e.t.)" : "", match.penalties ? `Penalties ${match.penalties}` : ""].filter(Boolean).join(" · ");
   return `
     <article class="hero" ${matchThumbnailStyle(match)}>
@@ -60,7 +60,7 @@ function renderMatchCard(match) {
   const team2Score = match.score2 === "" || match.score2 == null ? "" : match.score2;
   const scoreConfirmed = hasConfirmedScore(match);
   return `
-    <article class="match-card" data-match-id="${match.id}">
+    <article class="match-card" data-match-id="${match.id}" ${matchThumbnailStyle(match)}>
       <div class="match-meta"><span>${escapeHtml(match.tournament)}</span><span>${dateLabel(match.date)}</span></div>
       <div class="match-card-team"><span class="flag">${flag(match.team1)}</span><strong>${escapeHtml(match.team1)}</strong><span class="card-score">${scoreConfirmed ? team1Score : ""}</span></div>
       <div class="match-card-team"><span class="flag">${flag(match.team2)}</span><strong>${escapeHtml(match.team2)}</strong><span class="card-score">${scoreConfirmed ? team2Score : ""}</span></div>
@@ -88,7 +88,7 @@ function renderFullMatchRow(match) {
       <div class="row-date">${dateLabel(match.date)}</div>
       <div class="row-teams">
         <div class="row-team"><span class="flag">${flag(match.team1)}</span><span>${escapeHtml(match.team1)}</span></div>
-        <div class="row-score">${scoreText(match)}</div>
+        <div class="row-score">${scoreText(match) || "vs."}</div>
         <div class="row-team"><span>${escapeHtml(match.team2)}</span><span class="flag">${flag(match.team2)}</span></div>
       </div>
       <div class="row-round">${escapeHtml(match.round)}</div>

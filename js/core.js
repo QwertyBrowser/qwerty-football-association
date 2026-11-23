@@ -86,10 +86,11 @@ function sortedMatches() {
 
 function isMatchUpcoming(match) {
   if (!match.date) return false;
-  const today = new Intl.DateTimeFormat("en-CA", {
-    timeZone:"UTC", year:"numeric", month:"2-digit", day:"2-digit"
-  }).format(new Date());
-  return match.date > today;
+  const now = new Date();
+  const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+  if (match.date > today) return true;
+  if (match.date === today) return !hasConfirmedScore(match);
+  return false;
 }
 
 function hasConfirmedScore(match) {
@@ -123,7 +124,7 @@ function getYouTubeId(value) {
 }
 
 function matchThumbnailStyle(match) {
-  return match.thumbnail
-    ? `style="background-image: linear-gradient(120deg, rgba(23,79,64,.78), rgba(9,36,30,.92)), url('${escapeHtml(match.thumbnail)}')"`
-    : "";
+  if (!match.thumbnail) return "";
+  const thumbnail = encodeURI(match.thumbnail).replace(/'/g, "%27").replace(/"/g, "%22");
+  return `style="--match-thumbnail: url('${thumbnail}'); background-image: linear-gradient(120deg, rgba(23,79,64,.78), rgba(9,36,30,.92)), var(--match-thumbnail);"`;
 }
