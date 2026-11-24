@@ -41,7 +41,8 @@
   .match-side { font-size: 19px; }
   .match-team-flag { font-size: 46px; }
   .match-main-score { font-size: 58px; }
-  .match-goals-sheet { grid-template-columns: 1fr 120px 1fr; padding-left: 24px; padding-right: 24px; }
+  .match-goals-sheet { padding-left: 24px; padding-right: 24px; }
+  .match-penalties-sheet { padding-left: 24px; padding-right: 24px; }
 }
 
 @media (max-width: 620px) {
@@ -108,13 +109,12 @@
     font-size: 16px;
   }
   .match-team-flag { font-size: 42px; }
-  .match-team-dot { display: none; }
   .match-main-score { font-size: 42px; }
   .match-main-score-vs { font-size: 38px; }
   .match-main-score span { font-size: 30px; margin: 0 2px; }
   .match-status-pill { font-size: 10px; }
-  .match-goals-sheet { grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px 14px 20px; }
-  .match-goals-center { grid-column: 1 / -1; grid-row: 2; }
+  .match-goals-sheet { grid-template-columns: 1fr 32px 1fr; gap: 8px; padding: 12px 14px 20px; }
+  .match-penalties-sheet { gap: 0 12px; padding: 14px; }
   .match-goals-side li { font-size: 12px; }
   .match-sheet-footer { min-height: 110px; padding: 16px 12px; }
   .match-location { flex-wrap: wrap; justify-content: center; }

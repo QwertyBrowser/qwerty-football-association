@@ -16,11 +16,11 @@ document.addEventListener("click", e => {
     render();
     window.scrollTo({top:0, behavior:"smooth"});
   }
-  const tournamentCard = e.target.closest("[data-tournament-id]");
-  if (tournamentCard) {
-    currentView = "tournament-detail";
-    currentDetailId = tournamentCard.dataset.tournamentId;
-    location.hash = `tournament/${encodeURIComponent(currentDetailId)}`;
+  const eventCard = e.target.closest("[data-event-id]");
+  if (eventCard) {
+    currentView = "event-detail";
+    currentDetailId = eventCard.dataset.eventId;
+    location.hash = `event/${encodeURIComponent(currentDetailId)}`;
     render();
     window.scrollTo({top:0, behavior:"smooth"});
   }
@@ -28,7 +28,7 @@ document.addEventListener("click", e => {
     document.querySelectorAll(".filter-chip").forEach(chip => chip.classList.remove("active"));
     e.target.classList.add("active");
     const filter = e.target.dataset.filter;
-    document.querySelectorAll(".full-match-row").forEach(row => row.hidden = filter !== "All" && row.dataset.tournament !== filter);
+    document.querySelectorAll(".full-match-row").forEach(row => row.hidden = filter !== "All" && row.dataset.event !== filter);
     document.querySelectorAll(".match-day-group").forEach(group => {
       const rows = group.querySelectorAll(".full-match-row");
       group.hidden = rows.length > 0 && [...rows].every(row => row.hidden);

@@ -1,9 +1,9 @@
 function render() {
   const app = document.getElementById("app");
   if (currentView === "match-detail") app.innerHTML = renderMatchOverview(currentDetailId);
-  else if (currentView === "tournament-detail") app.innerHTML = renderTournamentOverview(currentDetailId);
+  else if (currentView === "event-detail") app.innerHTML = renderEventOverview(currentDetailId);
   else if (currentView === "matches") app.innerHTML = renderMatchesPage();
-  else if (currentView === "tournaments") app.innerHTML = renderTournamentsPage();
+  else if (currentView === "events") app.innerHTML = renderEventsPage();
   else app.innerHTML = renderHome();
 }
 
@@ -58,14 +58,14 @@ function matchDayLabel(date) {
 function renderHero(match) {
   const score = hasConfirmedScore(match) ? `${match.score1}–${match.score2}` : "vs.";
   const extras = [match.aet ? "(a.e.t.)" : "", match.penalties ? `Penalties ${match.penalties}` : ""].filter(Boolean).join(" · ");
-  const tournament = data.tournaments.find(item => item.name === match.tournament);
-  const themeStyle = tournamentThemeStyle(tournament);
+  const event = data.events.find(item => item.name === match.event);
+  const themeStyle = eventThemeStyle(event);
   const thumbnailStyle = matchThumbnailStyle(match).replace(/^style="/, "").replace(/"$/, "");
   const heroStyle = `style="${themeStyle}${thumbnailStyle ? `;${thumbnailStyle}` : ""}"`;
   return `
     <article class="hero" ${heroStyle}>
       <div class="hero-copy">
-        <div class="match-title-bar"><p class="eyebrow">${escapeHtml(match.tournament)} · ${escapeHtml(match.round)}</p></div>
+        <div class="match-title-bar"><p class="eyebrow">${escapeHtml(match.event)} · ${escapeHtml(match.round)}</p></div>
         <h1>${escapeHtml(match.team1)}<br>${escapeHtml(match.team2)}</h1>
         <div class="hero-round">${dateLabel(match.date)}</div>
         <div class="scoreboard">
@@ -88,25 +88,54 @@ function renderMatchCard(match) {
   const team1Score = match.score1 === "" || match.score1 == null ? "" : match.score1;
   const team2Score = match.score2 === "" || match.score2 == null ? "" : match.score2;
   const scoreConfirmed = hasConfirmedScore(match);
-  const tournament = data.tournaments.find(item => item.name === match.tournament);
-  const themeStyle = tournamentThemeStyle(tournament);
+  const event = data.events.find(item => item.name === match.event);
+  const themeStyle = eventThemeStyle(event);
   const thumbnailStyle = matchThumbnailStyle(match).replace(/^style="/, "").replace(/"$/, "");
   return `
     <article class="match-card" data-match-id="${match.id}" style="${themeStyle}${thumbnailStyle ? `;${thumbnailStyle}` : ""}">
-      <div class="match-meta"><span>${escapeHtml(match.tournament)}</span><span>${dateLabel(match.date)}</span></div>
+      <div class="match-meta"><span>${escapeHtml(match.event)}</span><span>${dateLabel(match.date)}</span></div>
       <div class="match-card-team"><span class="flag">${flag(match.team1)}</span><strong>${escapeHtml(match.team1)}</strong><span class="card-score">${scoreConfirmed ? team1Score : ""}</span></div>
       <div class="match-card-team"><span class="flag">${flag(match.team2)}</span><strong>${escapeHtml(match.team2)}</strong><span class="card-score">${scoreConfirmed ? team2Score : ""}</span></div>
     </article>`;
 }
 
+function renderGoalScorers(goals = []) {
+  const scorers = new Map();
+
+  goals.forEach(goal => {
+    const name = String(goal.name || "").trim();
+    if (!name) return;
+
+    const key = name.replace(/\s+/g, " ").toLocaleLowerCase();
+    if (!scorers.has(key)) scorers.set(key, { name, minutes: new Map() });
+
+    const minute = String(goal.minute || "").trim().replace(/[’']$/, "");
+    const minuteKey = minute || "__no_minute__";
+    const events = scorers.get(key).minutes;
+    const existing = events.get(minuteKey);
+    events.set(minuteKey, {
+      minute,
+      own: Boolean(goal.own || (existing && existing.own))
+    });
+  });
+
+  return [...scorers.values()].map(scorer => {
+    const minutes = [...scorer.minutes.values()]
+      .filter(event => event.minute)
+      .map(event => `${escapeHtml(event.minute)}’${event.own ? " (OG)" : ""}`)
+      .join(", ");
+    return `<li><strong>${escapeHtml(scorer.name)}</strong>${minutes ? `<span>${minutes}</span>` : ""}</li>`;
+  }).join("");
+}
+
 function renderMatchesPage() {
-  const tournaments = ["All", ...new Set(data.matches.map(m => m.tournament))];
+  const events = ["All", ...new Set(data.matches.map(m => m.event))];
   const upcoming = sortedMatches().filter(isMatchUpcoming).sort((a,b) => (a.date || "").localeCompare(b.date || ""));
   const results = sortedMatches().filter(match => !isMatchUpcoming(match));
   return `
     <div class="page">
       <div class="section-heading" style="margin-top:0"><div><p class="eyebrow">Results archive</p><h2>Matches</h2></div></div>
-      <div class="filter-bar">${tournaments.map((name,i) => `<button class="filter-chip ${i===0?"active":""}" data-filter="${escapeHtml(name)}">${escapeHtml(name)}</button>`).join("")}</div>
+      <div class="filter-bar">${events.map((name,i) => `<button class="filter-chip ${i===0?"active":""}" data-filter="${escapeHtml(name)}">${escapeHtml(name)}</button>`).join("")}</div>
       <div class="section-heading"><h2>Upcoming matches</h2></div>
       <div class="match-section" data-section="upcoming">${upcoming.length ? renderGroupedMatches(upcoming, renderFullMatchRow, "rows") : `<div class="empty-state compact">No upcoming matches scheduled.</div>`}</div>
       <div class="section-heading"><h2>Results</h2></div>
@@ -115,9 +144,9 @@ function renderMatchesPage() {
 }
 
 function renderFullMatchRow(match) {
-  const tournament = data.tournaments.find(item => item.name === match.tournament);
+  const event = data.events.find(item => item.name === match.event);
   return `
-    <article class="full-match-row" data-match-id="${match.id}" data-tournament="${escapeHtml(match.tournament)}" style="${tournamentThemeStyle(tournament)}">
+    <article class="full-match-row" data-match-id="${match.id}" data-event="${escapeHtml(match.event)}" style="${eventThemeStyle(event)}">
       <div class="row-date">${dateLabel(match.date)}</div>
       <div class="row-teams">
         <div class="row-team"><span>${escapeHtml(match.team1)}</span><span class="flag">${flag(match.team1)}</span></div>
@@ -128,28 +157,49 @@ function renderFullMatchRow(match) {
     </article>`;
 }
 
-function renderTournamentsPage() {
+function renderEventsPage() {
   return `
     <div class="page">
-      <div class="section-heading" style="margin-top:0"><div><p class="eyebrow">Competitions</p><h2>Tournaments</h2></div></div>
-      ${data.tournaments.length ? `<div class="tournament-grid">${data.tournaments.map(tournamentCard).join("")}</div>` : `<div class="empty-state">No tournaments added yet.</div>`}
+      <div class="section-heading" style="margin-top:0"><div><p class="eyebrow">Competitions</p><h2>Events</h2></div></div>
+      ${data.events.length ? `<div class="tournament-grid">${data.events.map(eventCard).join("")}</div>` : `<div class="empty-state">No events added yet.</div>`}
     </div>`;
 }
 
-function tournamentCard(t) {
+function eventCard(t) {
   const podium = [
     ["Champions",t.champion],["Runners-up",t.runnerUp],["Third place",t.third]
   ].filter(([,name]) => name && name !== "TBD").map(([label,name]) => `<div><span class="podium-label">${label}</span><span class="podium-name">${escapeHtml(name)}</span></div>`).join("");
-  const logo = tournamentLogoMarkup(t, "tournament-card-logo");
+  const logo = eventLogoMarkup(t, "tournament-card-logo");
   return `
-    <article class="tournament-card" data-tournament-id="${escapeHtml(t.id)}" style="${tournamentThemeStyle(t)}">
+    <article class="tournament-card" data-event-id="${escapeHtml(t.id)}" style="${eventThemeStyle(t)}">
       <div class="tournament-banner">${logo}<div><h3>${escapeHtml(t.name)}</h3><p>${escapeHtml(t.hosts || "Host nation TBD")}</p></div></div>
       <div class="tournament-body">
         ${podium || `<div><span class="podium-label">Status</span><span class="podium-name">In progress</span></div>`}
+        <div><span class="podium-label">Type</span><span class="podium-name">${escapeHtml(t.type || "Tournament")}</span></div>
         <div><span class="podium-label">Teams</span><span class="podium-name">${escapeHtml(t.teams || "—")}</span></div>
-        <div><span class="podium-label">Dates</span><span class="podium-name">${escapeHtml(t.dates || "—")}</span></div>
+        <div><span class="podium-label">Dates</span><span class="podium-name">${escapeHtml(eventDateRange(t))}</span></div>
       </div>
     </article>`;
+}
+
+function formatEventDate(date, includeYear = true) {
+  const match = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(String(date || ""));
+  if (!match) return "";
+  const [, day, month, year] = match;
+  const parsed = new Date(Date.UTC(Number(year), Number(month) - 1, Number(day)));
+  if (parsed.getUTCDate() !== Number(day) || parsed.getUTCMonth() !== Number(month) - 1) return "";
+  const monthName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][Number(month) - 1];
+  return `${day} ${monthName}${includeYear ? ` ${year}` : ""}`;
+}
+
+function eventDateRange(event) {
+  const startYear = String(event.startDate || "").slice(-4);
+  const endYear = String(event.endDate || "").slice(-4);
+  const sameYear = startYear && startYear === endYear;
+  const start = formatEventDate(event.startDate, !sameYear);
+  const end = formatEventDate(event.endDate, true);
+  if (start && end) return `${start} – ${end}`;
+  return start || end || "—";
 }
 
 function renderMatchOverview(id) {
@@ -163,23 +213,24 @@ function renderMatchOverview(id) {
     : "";
   const matchNumber = match.matchNumber ? `Match ${escapeHtml(match.matchNumber)} · ` : "";
   const matchTime = match.time ? escapeHtml(match.time) : (isUpcoming ? "Time TBC" : "");
-  const tournament = data.tournaments.find(item => item.name === match.tournament);
-  const themeStyle = tournamentThemeStyle(tournament);
+  const event = data.events.find(item => item.name === match.event);
+  const themeStyle = eventThemeStyle(event);
   const matchThumbnail = matchThumbnailStyle(match).replace(/^style="/, "").replace(/"$/, "");
-  const tournamentLogo = tournament && tournament.logo
-    ? `<img class="match-tournament-logo" src="${escapeHtml(tournament.logo)}" alt="${escapeHtml(tournament.name)} logo">`
+  const eventLogo = event && event.logo
+    ? `<img class="match-tournament-logo" src="${escapeHtml(event.logo)}" alt="${escapeHtml(event.name)} logo">`
     : "";
-  const team1Goals = (match.goals1 || []).map(goal => `<li><span>${escapeHtml(goal.minute)}’</span><strong>${escapeHtml(goal.name)}</strong>${goal.own ? " <span>(OG)</span>" : ""}</li>`).join("");
-  const team2Goals = (match.goals2 || []).map(goal => `<li><span>${escapeHtml(goal.minute)}’</span><strong>${escapeHtml(goal.name)}</strong>${goal.own ? " <span>(OG)</span>" : ""}</li>`).join("");
-  const penaltiesList = (match.penaltyTakers || []).map(taker =>
-    `<li><span>${taker.scored ? "✓" : "×"}</span><strong>${escapeHtml(taker.name)}</strong></li>`
-  ).join("");
-  const goalList = team => (team || []).map(goal =>
-    `<li><strong>${escapeHtml(goal.name)}</strong>${goal.minute ? ` ${escapeHtml(goal.minute)}’` : ""}${goal.own ? " · Own goal" : ""}</li>`
-  ).join("");
-  const penalties = (match.penaltyTakers || []).map(taker =>
-    `<li><strong>${escapeHtml(taker.name)}</strong> · ${taker.scored ? "Scored" : "Missed"}</li>`
-  ).join("");
+  const team1Goals = renderGoalScorers(match.goals1);
+  const team2Goals = renderGoalScorers(match.goals2);
+  const penaltyTakers = match.penaltyTakers || [];
+  const penaltyResultIcon = taker =>
+    `<img class="penalty-result-icon" src="assets/icons/penalty-${taker.scored ? "scored" : "missed"}.svg" alt="${taker.scored ? "Scored" : "Missed"}">`;
+  const renderPenaltyTaker = (taker, team) => team === match.team1
+    ? `<li><strong>${escapeHtml(taker.name)}</strong>${penaltyResultIcon(taker)}</li>`
+    : `<li>${penaltyResultIcon(taker)}<strong>${escapeHtml(taker.name)}</strong></li>`;
+  const team1Penalties = penaltyTakers.filter(taker => taker.team === match.team1)
+    .map(taker => renderPenaltyTaker(taker, match.team1)).join("");
+  const team2Penalties = penaltyTakers.filter(taker => taker.team === match.team2)
+    .map(taker => renderPenaltyTaker(taker, match.team2)).join("");
   const youtubeId = getYouTubeId(match.highlightUrl);
   const highlightFile = match.highlightFile || (match.highlightMedia ? match.highlight : "");
   const highlightSection = youtubeId || highlightFile ? `
@@ -197,13 +248,12 @@ function renderMatchOverview(id) {
       <article class="match-sheet" style="${themeStyle}${matchThumbnail ? `;${matchThumbnail}` : ""}">
         <header class="match-sheet-top">
           <div class="match-sheet-context">${matchNumber}${escapeHtml(match.round)}</div>
-          <div class="match-tournament-mark">${tournamentLogo}</div>
+          <div class="match-tournament-mark">${eventLogo}</div>
           <div class="match-sheet-datetime">${matchTime}${matchTime && match.date ? " · " : ""}${dateLabel(match.date)}</div>
         </header>
 
         <section class="match-sheet-result">
           <div class="match-side match-side-left">
-            <span class="match-team-dot"></span>
             <strong>${escapeHtml(match.team1)}</strong>
             <span class="match-team-flag">${flag(match.team1)}</span>
           </div>
@@ -224,15 +274,27 @@ function renderMatchOverview(id) {
           </div>
         </section>
 
-        ${(team1Goals || team2Goals || penaltiesList) ? `
+        ${(team1Goals || team2Goals) ? `
           <section class="match-goals-sheet">
             <div class="match-goals-side">${team1Goals}</div>
-            <div class="match-goals-center">${penaltiesList ? `<div class="penalty-summary"><span>Penalties</span><ul>${penaltiesList}</ul></div>` : ""}</div>
+            <img class="match-goals-ball" src="assets/icons/football.svg" alt="">
             <div class="match-goals-side match-goals-right">${team2Goals}</div>
+          </section>` : ""}
+        ${penaltyTakers.length ? `
+          <section class="match-penalties-sheet">
+            <h3>Penalties</h3>
+            <div class="match-penalty-team">
+              <h4>${escapeHtml(match.team1)}</h4>
+              <ul class="match-penalty-list match-penalty-list-team1">${team1Penalties}</ul>
+            </div>
+            <div class="match-penalty-team">
+              <h4>${escapeHtml(match.team2)}</h4>
+              <ul class="match-penalty-list match-penalty-list-team2">${team2Penalties}</ul>
+            </div>
           </section>` : ""}
 
         <footer class="match-sheet-footer">
-          <div class="match-tournament-name">${escapeHtml(match.tournament)}</div>
+          <div class="match-tournament-name">${escapeHtml(match.event)}</div>
           <div class="match-location"><span>${escapeHtml(match.city || "")}</span>${match.city && match.stadium ? "<span class=\"location-dot\">•</span>" : ""}<span>${escapeHtml(match.stadium || "")}</span></div>
           ${match.referee ? `<div class="match-fact">${escapeHtml(match.referee)}${match.attendance ? ` · ${attendanceLabel(match.attendance)} attendance` : ""}</div>` : ""}
         </footer>
@@ -245,24 +307,24 @@ function overviewDetail(label, value) {
   return value ? `<div class="overview-detail"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>` : "";
 }
 
-function renderTournamentOverview(id) {
-  const tournament = data.tournaments.find(item => item.id === id);
-  if (!tournament) return `<div class="page"><div class="empty-state"><h2>Tournament not found</h2><button class="text-button" data-view="tournaments">Back to tournaments</button></div></div>`;
-  const matches = data.matches.filter(match => match.tournament === tournament.name);
+function renderEventOverview(id) {
+  const event = data.events.find(item => item.id === id);
+  if (!event) return `<div class="page"><div class="empty-state"><h2>Event not found</h2><button class="text-button" data-view="events">Back to events</button></div></div>`;
+  const matches = data.matches.filter(match => match.event === event.name);
   const upcoming = matches.filter(isMatchUpcoming).sort((a,b) => (a.date || "").localeCompare(b.date || ""));
   const recent = matches.filter(match => !isMatchUpcoming(match)).sort((a,b) => (b.date || "").localeCompare(a.date || ""));
   const podium = [
-    ["Champions",tournament.champion],["Runners-up",tournament.runnerUp],["Third place",tournament.third]
+    ["Champions",event.champion],["Runners-up",event.runnerUp],["Third place",event.third]
   ].filter(([,name]) => name && name !== "TBD");
-  const tournamentLogo = tournamentLogoMarkup(tournament, "tournament-overview-logo");
+  const eventLogo = eventLogoMarkup(event, "tournament-overview-logo");
   return `
     <div class="page overview-page">
-      <button class="back-button" data-view="tournaments">← Back to tournaments</button>
-      <section class="tournament-overview-header" style="${tournamentThemeStyle(tournament)}">
-        ${tournamentLogo}
-        <p class="eyebrow">Tournament overview</p>
-        <h1>${escapeHtml(tournament.name)}</h1>
-        <p>${escapeHtml(tournament.hosts || "Host nation TBD")} · ${escapeHtml(tournament.dates || "")}</p>
+      <button class="back-button" data-view="events">← Back to events</button>
+      <section class="tournament-overview-header" style="${eventThemeStyle(event)}">
+        ${eventLogo}
+        <p class="eyebrow">${escapeHtml(event.type || "Tournament")}</p>
+        <h1>${escapeHtml(event.name)}</h1>
+        <p>${escapeHtml(event.hosts || "Host nation TBD")} · ${escapeHtml(eventDateRange(event))}</p>
       </section>
       ${podium.length ? `<div class="overview-podium">${podium.map(([label,name]) => `<div><span>${escapeHtml(label)}</span><strong>${escapeHtml(name)}</strong></div>`).join("")}</div>` : ""}
       <div class="section-heading"><h2>Upcoming matches</h2></div>

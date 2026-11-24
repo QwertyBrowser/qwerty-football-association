@@ -8,11 +8,11 @@ A static football/soccer results website that is hosted with GitHub Pages and re
 - `styles.css` - Shared stylesheet imports
 - `css/` - Base, landing, overview, form, and responsive styles
 - `js/core.js` - JSON loading and shared utilities
-- `js/pages.js` - Home, match, and tournament views
+- `js/pages.js` - Home, match, and event views
 - `js/shell.js` - Navigation and click handling
 - `js/router.js` - Page routing
 - `data/matches.json` - Match records
-- `data/tournaments.json` - Tournament records
+- `data/events.json` - Event records
 - `data/countries.json` - Countries and FIFA codes
 - `data/settings.json` - Homepage and display settings
 - `assets/media/` - Optional thumbnails and highlight videos
@@ -23,50 +23,51 @@ Edit the JSON files through GitHub or locally. Commit and push your changes to p
 
 ### Matches template
 
-Edit `data/matches.json`.
+Edit `data/matches.json` to add or update match records.
 
 ```json
 [
   {
-    "id": "unique-match-id",
-    "featured": false,
-    "tournament": "Tournament name or Friendly",
-    "round": "Final",
-    "team1": "Spain",
-    "team2": "England",
-    "score1": "2",
-    "score2": "1",
-    "aet": false,
-    "penalties": "5-3",
-    "goals1": [
-      {
-        "name": "Player name",
-        "minute": "47",
-        "own": false
-      }
-    ],
-    "goals2": [
-      {
-        "name": "Player name",
-        "minute": "73",
-        "own": false
-      }
-    ],
-    "penaltyTakers": [
-      {
-        "name": "Player name",
-        "scored": true
-      }
-    ],
-    "referee": "Referee name",
-    "attendance": "74475",
-    "stadium": "Olympiastadion",
-    "city": "Berlin",
-    "country": "Germany",
-    "date": "2026-09-30",
-    "thumbnail": "assets/media/spain-england.jpg",
-    "highlightUrl": "https://www.youtube.com/watch?v=VIDEO_ID",
-    "highlightFile": "assets/media/spain-england.mp4"
+  "id": "unique-match-id",
+  "featured": false,
+  "event": "Event name or Friendly",
+  "round": "Final",
+  "team1": "Spain",
+  "team2": "England",
+  "score1": "2",
+  "score2": "1",
+  "aet": false,
+  "penalties": "5-3",
+  "goals1": [
+    {
+      "name": "Player name",
+      "minute": "47",
+      "own": false
+    }
+  ],
+  "goals2": [
+    {
+      "name": "Player name",
+      "minute": "73",
+      "own": false
+    }
+  ],
+  "penaltyTakers": [
+    {
+      "name": "Player name",
+      "team": "Spain",
+      "scored": true
+    }
+  ],
+  "referee": "Referee name",
+  "attendance": "74475",
+  "stadium": "Olympiastadion",
+  "city": "Berlin",
+  "country": "Germany",
+  "date": "2026-09-30",
+  "thumbnail": "assets/media/spain-england.jpg",
+  "highlightUrl": "https://www.youtube.com/watch?v=VIDEO_ID",
+  "highlightFile": "assets/media/spain-england.mp4"
   }
 ]
 ```
@@ -75,12 +76,13 @@ Match field guidance:
 
 - `id`: Unique identifier. Do not change an existing ID unless the match is replaced.
 - `featured`: `true` to place the match in the homepage spotlight. Maximum: 6 matches.
-- `tournament`: Use `Friendly` or the exact name of a tournament in `tournaments.json`.
+- `event`: Use `Friendly` or the exact name of an event in `events.json`.
 - `team1` and `team2`: Country names must exist in `countries.json`.
 - `score1` and `score2`: Leave both values as `""` when the score is not confirmed.
 - `aet`: `true` if the match finished after extra time.
 - `penalties`: Optional penalty score, for example `"5-3"`. Leave `""` when unused.
-- `goals1` and `goals2`: Use separate arrays for team 1 and team 2.
+- `goals1` and `goals2`: Use separate arrays for team 1 and team 2. The overview combines repeated scorer names and displays each distinct minute once.
+- `penaltyTakers`: Add each taker's `team` using the exact name in `team1` or `team2` so the overview displays them under the correct nation.
 - `own`: `true` for an own goal.
 - `attendance`: Digits only, for example `"74475"`.
 - `date`: ISO format: `yyyy-mm-dd`.
@@ -96,18 +98,20 @@ For an upcoming match, leave `score1` and `score2` blank:
 "score2": ""
 ```
 
-### Tournaments template
+### Events template
 
-Edit `data/tournaments.json`.
+Edit `data/events.json`.
 
 ```json
 [
   {
-    "id": "unique-tournament-id",
+    "id": "unique-event-id",
     "name": "2026 QFA Nations Cup",
+    "type": "Tournament",
     "teams": "24",
     "hosts": "Qatar",
-    "dates": "11/06/2026 - 19/07/2026",
+    "startDate": "11/06/2026",
+    "endDate": "19/07/2026",
     "logo": "assets/media/qfa-nations-cup.png",
     "primaryColor": "#147d64",
     "secondaryColor": "#b9ff66",
@@ -118,18 +122,20 @@ Edit `data/tournaments.json`.
 ]
 ```
 
-Tournament field guidance:
+Event field guidance:
 
 - `id`: Unique identifier.
-- `name`: Tournament display name. Match records must use this exact name.
+- `name`: Event display name. Match records must use this exact name.
+- `type`: Use `Tournament` or `League`.
 - `teams`: Number of participating teams.
 - `hosts`: Host nation or a comma-separated list.
-- `dates`: Display dates in the format `dd/mm/yyyy - dd/mm/yyyy`.
-- `logo`: Optional tournament logo path, for example `assets/media/tournament-logo.png`.
+- `startDate` and `endDate`: Separate dates in `dd/mm/yyyy` format. Cards and event overviews format the range for display.
+- Same-year dates display as `30 Sep – 30 Oct 2026`; different-year dates display as `30 Sep 2026 – 30 Sep 2027`.
+- `logo`: Optional event logo path, for example `assets/media/event-logo.png`.
 - `primaryColor`: Optional two-color theme primary hex value. Defaults to `#147d64`.
 - `secondaryColor`: Optional two-color theme accent hex value. Defaults to `#b9ff66`.
 - `champion`, `runnerUp`, `third`: Use a country name or `"TBD"`.
-- Tournament positions set to `"TBD"` are hidden from public tournament pages.
+- Event positions set to `"TBD"` are hidden from public event pages.
 
 ### Countries template
 

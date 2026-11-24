@@ -1,14 +1,14 @@
 const FifaToIso = {
-  ALG:"DZ", ARG:"AR", AUS:"AU", AUT:"AT", BEL:"BE", BRA:"BR", CAN:"CA", CPV:"CV",
-  CHI:"CL", COL:"CO", CRC:"CR", CRO:"HR", CUW:"CW", CZE:"CZ", COD:"CD", DEN:"DK",
+  ALG:"DZ", ARG:"AR", AUS:"AU", AUT:"AT", BHR:"BH", BEL:"BE", BRA:"BR", CAN:"CA", CPV:"CV",
+  CHI:"CL", CHN:"CN", COL:"CO", CRC:"CR", CRO:"HR", CUW:"CW", CZE:"CZ", COD:"CD", DEN:"DK",
   ECU:"EC", EGY:"EG", FRA:"FR", GER:"DE", GHA:"GH", GRE:"GR", HAI:"HT", IRN:"IR",
   IRQ:"IQ", ITA:"IT", CIV:"CI", JPN:"JP", JOR:"JO", MEX:"MX", MAR:"MA", NED:"NL",
-  NZL:"NZ", NGA:"NG", NOR:"NO", PAN:"PA", PNG:"PG", PAR:"PY", POL:"PL", POR:"PT",
-  QAT:"QA", IRL:"IE", KSA:"SA", SEN:"SN", SRB:"RS", RSA:"ZA", KOR:"KR", ESP:"ES",
-  SWE:"SE", SUI:"CH", TUR:"TR", UKR:"UA", USA:"US", URU:"UY", UZB:"UZ", VEN:"VE"
+  NZL:"NZ", NGA:"NG", NOR:"NO", OMA:"OM", PAN:"PA", PNG:"PG", PAR:"PY", POL:"PL", POR:"PT",
+  QAT:"QA", IRL:"IE", KSA:"SA", SEN:"SN", SRB:"RS", SIN:"SG", RSA:"ZA", KOR:"KR", ESP:"ES",
+  SWE:"SE", SUI:"CH", THA:"TH", TUR:"TR", UAE:"AE", UKR:"UA", USA:"US", URU:"UY", UZB:"UZ", VEN:"VE", VIE:"VN"
 };
 
-let data = { customCountries: [], tournaments: [], matches: [], countries: [], settings: { spotlightTitle:"Featured matches" } };
+let data = { customCountries: [], events: [], matches: [], countries: [], settings: { spotlightTitle:"Featured matches" } };
 let currentView = "home";
 let currentDetailId = null;
 let countryMap = {};
@@ -17,17 +17,17 @@ let countryCodes = {};
 async function loadJsonData() {
   try {
     const timestamp = Date.now();
-    const [countryResponse, tournamentResponse, matchResponse, settingsResponse] = await Promise.all([
+    const [countryResponse, eventResponse, matchResponse, settingsResponse] = await Promise.all([
       fetch(`data/countries.json?v=${timestamp}`),
-      fetch(`data/tournaments.json?v=${timestamp}`),
+      fetch(`data/events.json?v=${timestamp}`),
       fetch(`data/matches.json?v=${timestamp}`),
       fetch(`data/settings.json?v=${timestamp}`)
     ]);
-    if (![countryResponse, tournamentResponse, matchResponse, settingsResponse].every(response => response.ok)) {
+    if (![countryResponse, eventResponse, matchResponse, settingsResponse].every(response => response.ok)) {
       throw new Error("One or more JSON data files could not be loaded.");
     }
     data.countries = await countryResponse.json();
-    data.tournaments = await tournamentResponse.json();
+    data.events = await eventResponse.json();
     data.matches = await matchResponse.json();
     data.settings = await settingsResponse.json();
   } catch (error) {
@@ -135,19 +135,19 @@ function validThemeColor(value, fallback) {
   return /^#[0-9a-f]{6}$/i.test(String(value || "")) ? value : fallback;
 }
 
-function tournamentTheme(tournament) {
+function eventTheme(event) {
   return {
-    primary: validThemeColor(tournament && tournament.primaryColor, "#147d64"),
-    secondary: validThemeColor(tournament && tournament.secondaryColor, "#b9ff66")
+    primary: validThemeColor(event && event.primaryColor, "#147d64"),
+    secondary: validThemeColor(event && event.secondaryColor, "#b9ff66")
   };
 }
 
-function tournamentThemeStyle(tournament) {
-  const theme = tournamentTheme(tournament);
+function eventThemeStyle(event) {
+  const theme = eventTheme(event);
   return `--tournament-primary:${theme.primary};--tournament-secondary:${theme.secondary};`;
 }
 
-function tournamentLogoMarkup(tournament, className = "tournament-logo") {
-  if (!tournament || !tournament.logo) return "";
-  return `<img class="${className}" src="${escapeHtml(tournament.logo)}" alt="${escapeHtml(tournament.name)} logo">`;
+function eventLogoMarkup(event, className = "event-logo") {
+  if (!event || !event.logo) return "";
+  return `<img class="${className}" src="${escapeHtml(event.logo)}" alt="${escapeHtml(event.name)} logo">`;
 }

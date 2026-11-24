@@ -3,11 +3,11 @@ function readRoute() {
   if (hash.startsWith("match/")) {
     currentView = "match-detail";
     currentDetailId = decodeURIComponent(hash.slice(6));
-  } else if (hash.startsWith("tournament/")) {
-    currentView = "tournament-detail";
-    currentDetailId = decodeURIComponent(hash.slice(11));
-  } else if (["matches", "tournaments"].includes(hash)) {
-    currentView = hash;
+  } else if (hash.startsWith("event/") || hash.startsWith("tournament/")) {
+    currentView = "event-detail";
+    currentDetailId = decodeURIComponent(hash.slice(hash.indexOf("/") + 1));
+  } else if (["matches", "events", "tournaments"].includes(hash)) {
+    currentView = hash === "tournaments" ? "events" : hash;
   } else {
     currentView = "home";
   }

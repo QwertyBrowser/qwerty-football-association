@@ -2,7 +2,6 @@
   {
     "id": "euras2026-match(1)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group A",
     "team1": "Poland",
     "team2": "United Arab Emirates",
@@ -33,12 +32,12 @@
     "date": "2026-09-01",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(2)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group A",
     "team1": "South Korea",
     "team2": "Slovakia",
@@ -63,12 +62,12 @@
     "date": "2026-09-01",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(3)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group B",
     "team1": "Germany",
     "team2": "Uzbekistan",
@@ -93,12 +92,12 @@
     "date": "2026-09-02",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(4)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group C",
     "team1": "Spain",
     "team2": "Iran",
@@ -123,12 +122,12 @@
     "date": "2026-09-02",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(5)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group B",
     "team1": "Sweden",
     "team2": "Qatar",
@@ -158,12 +157,12 @@
     "date": "2026-09-03",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(6)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group C",
     "team1": "Italy",
     "team2": "Japan",
@@ -193,12 +192,12 @@
     "date": "2026-09-03",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(7)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group D",
     "team1": "Switzerland",
     "team2": "Thailand",
@@ -217,12 +216,12 @@
     "date": "2026-09-04",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(8)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group D",
     "team1": "Saudi Arabia",
     "team2": "Austria",
@@ -247,12 +246,12 @@
     "date": "2026-09-04",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(9)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group E",
     "team1": "England",
     "team2": "Belgium",
@@ -282,12 +281,12 @@
     "date": "2026-09-05",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(10)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group E",
     "team1": "Portugal",
     "team2": "Croatia",
@@ -322,12 +321,12 @@
     "date": "2026-09-05",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(11)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group F",
     "team1": "Oman",
     "team2": "Vietnam",
@@ -363,12 +362,12 @@
     "date": "2026-09-05",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(12)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group F",
     "team1": "China",
     "team2": "Jordan",
@@ -393,12 +392,12 @@
     "date": "2026-09-05",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(13)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group G",
     "team1": "Australia",
     "team2": "Bahrain",
@@ -444,12 +443,12 @@
     "date": "2026-09-06",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(14)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group G",
     "team1": "Singapore",
     "team2": "Iraq",
@@ -474,12 +473,12 @@
     "date": "2026-09-06",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(15)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group H",
     "team1": "France",
     "team2": "Ukraine",
@@ -520,12 +519,12 @@
     "date": "2026-09-06",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(16)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group H",
     "team1": "Netherlands",
     "team2": "Denmark",
@@ -560,12 +559,12 @@
     "date": "2026-09-06",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(17)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group A",
     "team1": "Poland",
     "team2": "South Korea",
@@ -611,12 +610,12 @@
     "date": "2026-09-07",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(18)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group A",
     "team1": "Slovakia",
     "team2": "United Arab Emirates",
@@ -646,12 +645,12 @@
     "date": "2026-09-07",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(19)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group B",
     "team1": "Germany",
     "team2": "Sweden",
@@ -682,12 +681,12 @@
     "date": "2026-09-07",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(20)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group C",
     "team1": "Spain",
     "team2": "Japan",
@@ -712,12 +711,12 @@
     "date": "2026-09-07",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(21)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group B",
     "team1": "Uzbekistan",
     "team2": "Qatar",
@@ -752,12 +751,12 @@
     "date": "2026-09-08",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(22)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group C",
     "team1": "Italy",
     "team2": "Iran",
@@ -782,12 +781,12 @@
     "date": "2026-09-08",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(23)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group D",
     "team1": "Switzerland",
     "team2": "Austria",
@@ -822,12 +821,12 @@
     "date": "2026-09-08",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(24)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group D",
     "team1": "Saudi Arabia",
     "team2": "Thailand",
@@ -863,12 +862,12 @@
     "date": "2026-09-08",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(25)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group E",
     "team1": "England",
     "team2": "Croatia",
@@ -914,12 +913,12 @@
     "date": "2026-09-09",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(26)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group E",
     "team1": "Portugal",
     "team2": "Belgium",
@@ -949,12 +948,12 @@
     "date": "2026-09-09",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(27)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group F",
     "team1": "Oman",
     "team2": "China",
@@ -990,12 +989,12 @@
     "date": "2026-09-09",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(28)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group F",
     "team1": "Vietnam",
     "team2": "Jordan",
@@ -1030,12 +1029,12 @@
     "date": "2026-09-09",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(29)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group G",
     "team1": "Australia",
     "team2": "Singapore",
@@ -1066,12 +1065,12 @@
     "date": "2026-09-10",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(30)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group G",
     "team1": "Bahrain",
     "team2": "Iraq",
@@ -1101,12 +1100,12 @@
     "date": "2026-09-10",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(31)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group H",
     "team1": "France",
     "team2": "Netherlands",
@@ -1147,12 +1146,12 @@
     "date": "2026-09-10",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(32)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group H",
     "team1": "Ukraine",
     "team2": "Denmark",
@@ -1192,12 +1191,12 @@
     "date": "2026-09-10",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(33)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group A",
     "team1": "Poland",
     "team2": "Slovakia",
@@ -1232,12 +1231,12 @@
     "date": "2026-09-11",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(34)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group A",
     "team1": "South Korea",
     "team2": "United Arab Emirates",
@@ -1268,12 +1267,12 @@
     "date": "2026-09-11",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(35)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group B",
     "team1": "Germany",
     "team2": "Qatar",
@@ -1304,12 +1303,12 @@
     "date": "2026-09-11",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(36)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group B",
     "team1": "Uzbekistan",
     "team2": "Sweden",
@@ -1345,12 +1344,12 @@
     "date": "2026-09-11",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(37)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group C",
     "team1": "Spain",
     "team2": "Italy",
@@ -1375,12 +1374,12 @@
     "date": "2026-09-12",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(38)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group C",
     "team1": "Japan",
     "team2": "Iran",
@@ -1411,12 +1410,12 @@
     "date": "2026-09-12",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(39)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group D",
     "team1": "Switzerland",
     "team2": "Saudi Arabia",
@@ -1447,12 +1446,12 @@
     "date": "2026-09-12",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(40)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group D",
     "team1": "Austria",
     "team2": "Thailand",
@@ -1488,12 +1487,12 @@
     "date": "2026-09-12",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(41)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group E",
     "team1": "England",
     "team2": "Portugal",
@@ -1523,12 +1522,12 @@
     "date": "2026-09-13",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(42)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group E",
     "team1": "Croatia",
     "team2": "Belgium",
@@ -1569,12 +1568,12 @@
     "date": "2026-09-13",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(43)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group F",
     "team1": "Oman",
     "team2": "Jordan",
@@ -1615,12 +1614,12 @@
     "date": "2026-09-13",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(44)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group F",
     "team1": "Vietnam",
     "team2": "China",
@@ -1656,12 +1655,12 @@
     "date": "2026-09-13",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(45)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group G",
     "team1": "Australia",
     "team2": "Iraq",
@@ -1686,12 +1685,12 @@
     "date": "2026-09-14",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(46)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group G",
     "team1": "Bahrain",
     "team2": "Singapore",
@@ -1721,12 +1720,12 @@
     "date": "2026-09-14",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(47)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group H",
     "team1": "France",
     "team2": "Denmark",
@@ -1782,12 +1781,12 @@
     "date": "2026-09-14",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(48)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Group H",
     "team1": "Ukraine",
     "team2": "Netherlands",
@@ -1828,12 +1827,12 @@
     "date": "2026-09-14",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(49)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Round of 16",
     "team1": "Poland",
     "team2": "Netherlands",
@@ -1858,12 +1857,12 @@
     "date": "2026-09-15",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(50)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Round of 16",
     "team1": "Uzbekistan",
     "team2": "Australia",
@@ -1888,12 +1887,12 @@
     "date": "2026-09-15",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(51)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Round of 16",
     "team1": "Saudi Arabia",
     "team2": "Portugal",
@@ -1934,12 +1933,12 @@
     "date": "2026-09-16",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(52)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Round of 16",
     "team1": "England",
     "team2": "Switzerland",
@@ -1952,59 +1951,73 @@
     "penaltyTakers": [
       {
         "name": "Tony",
-        "scored": true
+        "scored": true,
+        "team": "England"
       },
       {
         "name": "Bellingham",
-        "scored": false
+        "scored": false,
+        "team": "England"
       },
       {
         "name": "Saka",
-        "scored": true
+        "scored": true,
+        "team": "England"
       },
       {
         "name": "Gordon",
-        "scored": true
+        "scored": true,
+        "team": "England"
       },
       {
         "name": "Anderson",
-        "scored": true
+        "scored": true,
+        "team": "England"
       },
       {
         "name": "Rice",
-        "scored": true
+        "scored": true,
+        "team": "England"
       },
       {
         "name": "Spence",
-        "scored": true
+        "scored": true,
+        "team": "England"
       },
       {
         "name": "Okafor",
-        "scored": true
+        "scored": true,
+        "team": "Switzerland"
       },
       {
         "name": "Vargas",
-        "scored": true
+        "scored": true,
+        "team": "Switzerland"
       },
       {
         "name": "Ndoye",
-        "scored": true
+        "scored": true,
+        "team": "Switzerland"
       },
       {
         "name": "Sow",
-        "scored": false
+        "scored": false,
+        "team": "Switzerland"
       },
       {
         "name": "Aebischer",
-        "scored": true
+        "scored": true,
+        "team": "Switzerland"
       },
       {
         "name": "Zakaria",
-        "scored": true
+        "scored": true,
+        "team": "Switzerland"
       },
       {
         "name": "Muheim",
-        "scored": false
+        "scored": false,
+        "team": "Switzerland"
       }
     ],
     "referee": "Yamashita Yoshimi",
@@ -2015,12 +2028,12 @@
     "date": "2026-09-16",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(53)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Round of 16",
     "team1": "Iraq",
     "team2": "Germany",
@@ -2056,12 +2069,12 @@
     "date": "2026-09-17",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(54)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Round of 16",
     "team1": "Iran",
     "team2": "China",
@@ -2086,12 +2099,12 @@
     "date": "2026-09-17",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(55)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Round of 16",
     "team1": "Jordan",
     "team2": "Italy",
@@ -2116,12 +2129,12 @@
     "date": "2026-09-18",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(56)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Round of 16",
     "team1": "Denmark",
     "team2": "South Korea",
@@ -2134,43 +2147,53 @@
     "penaltyTakers": [
       {
         "name": "Højlund",
-        "scored": true
+        "scored": true,
+        "team": "Denmark"
       },
       {
         "name": "Skov Olsen",
-        "scored": false
+        "scored": false,
+        "team": "Denmark"
       },
       {
         "name": "Damsgaard",
-        "scored": false
+        "scored": false,
+        "team": "Denmark"
       },
       {
         "name": "Delaney",
-        "scored": true
+        "scored": true,
+        "team": "Denmark"
       },
       {
         "name": "Nørgaard",
-        "scored": true
+        "scored": true,
+        "team": "Denmark"
       },
       {
         "name": "Gue-sung",
-        "scored": true
+        "scored": true,
+        "team": "South Korea"
       },
       {
         "name": "Hyeon-gyu",
-        "scored": true
+        "scored": true,
+        "team": "South Korea"
       },
       {
         "name": "Heung-min",
-        "scored": false
+        "scored": false,
+        "team": "South Korea"
       },
       {
         "name": "Kang-in",
-        "scored": true
+        "scored": true,
+        "team": "South Korea"
       },
       {
         "name": "Dong-gyeong",
-        "scored": true
+        "scored": true,
+        "team": "South Korea"
       }
     ],
     "referee": "Victor Gomes",
@@ -2181,12 +2204,12 @@
     "date": "2026-09-18",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(57)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Quarterfinals",
     "team1": "Netherlands",
     "team2": "Iraq",
@@ -2211,59 +2234,73 @@
     "penaltyTakers": [
       {
         "name": "Depay",
-        "scored": true
+        "scored": true,
+        "team": "Netherlands"
       },
       {
         "name": "Malen",
-        "scored": false
+        "scored": false,
+        "team": "Netherlands"
       },
       {
         "name": "Lang",
-        "scored": false
+        "scored": false,
+        "team": "Netherlands"
       },
       {
         "name": "Koopmeiners",
-        "scored": false
+        "scored": false,
+        "team": "Netherlands"
       },
       {
         "name": "Reijnders",
-        "scored": true
+        "scored": true,
+        "team": "Netherlands"
       },
       {
         "name": "de Jong",
-        "scored": true
+        "scored": true,
+        "team": "Netherlands"
       },
       {
         "name": "Dumfries",
-        "scored": true
+        "scored": true,
+        "team": "Netherlands"
       },
       {
         "name": "Ali",
-        "scored": true
+        "scored": true,
+        "team": "Iraq"
       },
       {
         "name": "Al Hamadi",
-        "scored": false
+        "scored": false,
+        "team": "Iraq"
       },
       {
         "name": "Qasem",
-        "scored": false
+        "scored": false,
+        "team": "Iraq"
       },
       {
         "name": "Sher",
-        "scored": true
+        "scored": true,
+        "team": "Iraq"
       },
       {
         "name": "Yakob",
-        "scored": false
+        "scored": false,
+        "team": "Iraq"
       },
       {
         "name": "Ismail",
-        "scored": true
+        "scored": true,
+        "team": "Iraq"
       },
       {
         "name": "Hashim",
-        "scored": false
+        "scored": false,
+        "team": "Iraq"
       }
     ],
     "referee": "Priyesh Nath",
@@ -2274,12 +2311,12 @@
     "date": "2026-09-20",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(58)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Quarterfinals",
     "team1": "Uzbekistan",
     "team2": "South Korea",
@@ -2315,12 +2352,12 @@
     "date": "2026-09-21",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(59)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Quarterfinals",
     "team1": "Iran",
     "team2": "England",
@@ -2350,12 +2387,12 @@
     "date": "2026-09-22",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(60)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Quarterfinals",
     "team1": "Portugal",
     "team2": "Italy",
@@ -2385,12 +2422,12 @@
     "date": "2026-09-23",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(61)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Semifinals",
     "team1": "Netherlands",
     "team2": "England",
@@ -2425,12 +2462,12 @@
     "date": "2026-09-25",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(62)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Semifinals",
     "team1": "South Korea",
     "team2": "Portugal",
@@ -2455,12 +2492,12 @@
     "date": "2026-09-26",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(63)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Bronze Final",
     "team1": "Netherlands",
     "team2": "South Korea",
@@ -2510,12 +2547,12 @@
     "date": "2026-09-29",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "euras2026-match(64)",
     "featured": false,
-    "tournament": "2026 UEFA/AFC Eurasian Championship",
     "round": "Final",
     "team1": "England",
     "team2": "Portugal",
@@ -2551,12 +2588,12 @@
     "date": "2026-09-30",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 UEFA/AFC Eurasian Championship"
   },
   {
     "id": "qfanc2026-match1",
     "featured": false,
-    "tournament": "2026 QFA Nations Cup",
     "round": "Group A",
     "team1": "United States",
     "team2": "Uruguay",
@@ -2575,12 +2612,12 @@
     "date": "2026-11-22",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 QFA Nations Cup"
   },
   {
     "id": "qfanc2026-match2",
-    "featured": true,
-    "tournament": "2026 QFA Nations Cup",
+    "featured": false,
     "round": "Group A",
     "team1": "South Africa",
     "team2": "Iraq",
@@ -2605,12 +2642,12 @@
     "date": "2026-11-23",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 QFA Nations Cup"
   },
   {
     "id": "qfanc2026-match3",
-    "featured": true,
-    "tournament": "2026 QFA Nations Cup",
+    "featured": false,
     "round": "Group B",
     "team1": "France",
     "team2": "Norway",
@@ -2651,12 +2688,12 @@
     "date": "2026-11-23",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 QFA Nations Cup"
   },
   {
     "id": "qfanc2026-match4",
-    "featured": true,
-    "tournament": "2026 QFA Nations Cup",
+    "featured": false,
     "round": "Group C",
     "team1": "Morocco",
     "team2": "Ecuador",
@@ -2687,12 +2724,12 @@
     "date": "2026-11-23",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 QFA Nations Cup"
   },
   {
     "id": "qfanc2026-match5",
-    "featured": false,
-    "tournament": "2026 QFA Nations Cup",
+    "featured": true,
     "round": "Group B",
     "team1": "DR Congo",
     "team2": "Saudi Arabia",
@@ -2710,12 +2747,12 @@
     "date": "2026-11-24",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 QFA Nations Cup"
   },
   {
     "id": "qfanc2026-match6",
-    "featured": false,
-    "tournament": "2026 QFA Nations Cup",
+    "featured": true,
     "round": "Group C",
     "team1": "Venezuela",
     "team2": "Costa Rica",
@@ -2733,12 +2770,12 @@
     "date": "2026-11-24",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 QFA Nations Cup"
   },
   {
     "id": "qfanc2026-match7",
-    "featured": false,
-    "tournament": "2026 QFA Nations Cup",
+    "featured": true,
     "round": "Group D",
     "team1": "Portugal",
     "team2": "Austria",
@@ -2756,12 +2793,12 @@
     "date": "2026-11-24",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 QFA Nations Cup"
   },
   {
     "id": "qfanc2026-match8",
-    "featured": false,
-    "tournament": "2026 QFA Nations Cup",
+    "featured": true,
     "round": "Group D",
     "team1": "Poland",
     "team2": "Chile",
@@ -2779,6 +2816,7 @@
     "date": "2026-11-24",
     "thumbnail": "",
     "highlightUrl": "",
-    "highlightFile": ""
+    "highlightFile": "",
+    "event": "2026 QFA Nations Cup"
   }
 ]
