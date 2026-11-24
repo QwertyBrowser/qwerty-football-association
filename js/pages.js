@@ -207,7 +207,15 @@ function renderMatchOverview(id) {
   if (!match) return `<div class="page"><div class="empty-state"><h2>Match not found</h2><button class="text-button" data-view="matches">Back to matches</button></div></div>`;
   const score = hasConfirmedScore(match) ? `${match.score1}–${match.score2}` : "";
   const isUpcoming = isMatchUpcoming(match);
-  const resultStatus = score ? "Full Time" : (isUpcoming ? "Upcoming" : "Score TBC");
+  const resultStatus = match.penalties
+    ? "On Penalties"
+    : match.aet
+      ? "After Extra Time"
+      : score
+        ? "Full Time"
+        : isUpcoming
+          ? "Upcoming"
+          : "Score TBC";
   const penaltyNote = match.penalties
     ? `${match.team1} won ${match.penalties} on penalties`
     : "";
@@ -223,7 +231,7 @@ function renderMatchOverview(id) {
   const team2Goals = renderGoalScorers(match.goals2);
   const penaltyTakers = match.penaltyTakers || [];
   const penaltyResultIcon = taker =>
-    `<img class="penalty-result-icon" src="assets/icons/penalty-${taker.scored ? "scored" : "missed"}.svg" alt="${taker.scored ? "Scored" : "Missed"}">`;
+    `<img class="penalty-result-icon" src="assets/icons/penalty-${taker.scored ? "scored" : "missed"}.png" alt="${taker.scored ? "Scored" : "Missed"}">`;
   const renderPenaltyTaker = (taker, team) => team === match.team1
     ? `<li><strong>${escapeHtml(taker.name)}</strong>${penaltyResultIcon(taker)}</li>`
     : `<li>${penaltyResultIcon(taker)}<strong>${escapeHtml(taker.name)}</strong></li>`;
