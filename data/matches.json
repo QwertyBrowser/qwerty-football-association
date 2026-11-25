@@ -2729,7 +2729,7 @@
   },
   {
     "id": "qfanc2026-match5",
-    "featured": true,
+    "featured": false,
     "round": "Group B",
     "team1": "DR Congo",
     "team2": "Saudi Arabia",
@@ -2773,7 +2773,7 @@
   },
   {
     "id": "qfanc2026-match6",
-    "featured": true,
+    "featured": false,
     "round": "Group C",
     "team1": "Venezuela",
     "team2": "Costa Rica",
@@ -2807,7 +2807,7 @@
   },
   {
     "id": "qfanc2026-match7",
-    "featured": true,
+    "featured": false,
     "round": "Group D",
     "team1": "Portugal",
     "team2": "Austria",
@@ -2842,7 +2842,7 @@
   },
   {
     "id": "qfanc2026-match8",
-    "featured": true,
+    "featured": false,
     "round": "Group D",
     "team1": "Poland",
     "team2": "Chile",
@@ -2878,7 +2878,7 @@
   },
   {
     "id": "qfanc2026-match9",
-    "featured": false,
+    "featured": true,
     "round": "Group E",
     "team1": "Argentina",
     "team2": "Australia",
@@ -2902,7 +2902,7 @@
   },
   {
     "id": "qfanc2026-match10",
-    "featured": false,
+    "featured": true,
     "round": "Group E",
     "team1": "Turkey",
     "team2": "New Zealand",
@@ -2926,7 +2926,7 @@
   },
   {
     "id": "qfanc2026-match11",
-    "featured": false,
+    "featured": true,
     "round": "Group F",
     "team1": "Colombia",
     "team2": "Senegal",
@@ -2950,7 +2950,7 @@
   },
   {
     "id": "qfanc2026-match11",
-    "featured": false,
+    "featured": true,
     "round": "Group F",
     "team1": "Nigeria",
     "team2": "Cape Verde",
