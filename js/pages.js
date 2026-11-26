@@ -115,14 +115,15 @@ function renderGoalScorers(goals = []) {
     const existing = events.get(minuteKey);
     events.set(minuteKey, {
       minute,
-      own: Boolean(goal.own || (existing && existing.own))
+      own: Boolean(goal.own || (existing && existing.own)),
+      penalty: Boolean(goal.penalty || (existing && existing.penalty))
     });
   });
 
   return [...scorers.values()].map(scorer => {
     const minutes = [...scorer.minutes.values()]
       .filter(event => event.minute)
-      .map(event => `${escapeHtml(event.minute)}’${event.own ? " (OG)" : ""}`)
+      .map(event => `${escapeHtml(event.minute)}’${event.own ? " (OG)" : ""}${event.penalty ? " (pen.)" : ""}`)
       .join(", ");
     return `<li><strong>${escapeHtml(scorer.name)}</strong>${minutes ? `<span>${minutes}</span>` : ""}</li>`;
   }).join("");

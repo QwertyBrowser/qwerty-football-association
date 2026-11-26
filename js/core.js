@@ -87,7 +87,7 @@ function sortedMatches() {
 }
 
 function isMatchUpcoming(match) {
-  if (!match.date) return false;
+  if (!match.date) return !hasConfirmedScore(match);
   const now = new Date();
   const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
   if (match.date > today) return true;

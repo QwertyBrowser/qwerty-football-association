@@ -82,6 +82,7 @@ Match field guidance:
 - `aet`: `true` if the match finished after extra time.
 - `penalties`: Optional penalty score, for example `"5-3"`. Leave `""` when unused.
 - `goals1` and `goals2`: Use separate arrays for team 1 and team 2. The overview combines repeated scorer names and displays each distinct minute once.
+- Set a goal's optional `penalty` field to `true` to mark a penalty goal in the overview.
 - `penaltyTakers`: Add each taker's `team` using the exact name in `team1` or `team2` so the overview displays them under the correct nation.
 - `own`: `true` for an own goal.
 - `attendance`: Digits only, for example `"74475"`.
